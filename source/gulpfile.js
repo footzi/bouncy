@@ -4,7 +4,9 @@ var sass = require('gulp-sass');
 var browserSync = require('browser-sync');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglifyjs');
-var rename = require('gulp-rename')
+var rename = require('gulp-rename');
+var imagemin = require("gulp-imagemin");
+var pngquant = require("imagemin-pngquant");
 
 //pug
 gulp.task('pug', function () {
@@ -34,6 +36,17 @@ gulp.task("js", function() {
     .pipe(concat('main.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('../public/js'))
+})
+
+gulp.task("img", function(){
+    return gulp.src("images/**/*")
+    .pipe(imagemin({
+        interlaced: true,
+        progressive: true,
+        svgoPlugins:[{removeViewBox:false}],
+        use:[pngquant()]
+    }))
+    .pipe(gulp.dest('../public/images'))
 })
 
 //browserSync
