@@ -1,0 +1,2 @@
+1. фон на предзагрузку
+.col-lg-5.col-md-5.col-sm-5.col-xs-12.col-lg-offset-2.col-md-offset-2.col-sm-offset-2.about-text
