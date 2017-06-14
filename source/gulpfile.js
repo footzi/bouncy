@@ -62,6 +62,12 @@ gulp.task("image", function(){
     .pipe(gulp.dest('../public/images'))
 })
 
+//fonts
+gulp.task("fonts", function(){
+    return gulp.src("fonts/**/*")
+    .pipe(gulp.dest("../public/fonts"))
+});
+
 //browserSync
 gulp.task('browserSync', function() {
     browserSync({
@@ -77,6 +83,7 @@ gulp.task('watch', ['browserSync','sass'], function(){
     gulp.watch('styles/**/*.scss', ['sass'])
     gulp.watch('js/**/*.js', ['js'])
     gulp.watch('images/**/*', ['image'])
+    gulp.watch('fonts/**/*', ['fonts'])
     gulp.watch('../public/*.html', browserSync.reload)
     gulp.watch('../public/js/*.js', browserSync.reload)
 });

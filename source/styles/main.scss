@@ -1,17 +1,66 @@
 @import "components/var";
+@import "components/fonts";
 @import "../libs/bootstrap/dist/css/bootstrap.min";
+@import "../libs/pe-icon-7-stroke/pe-icon-7-stroke";
+
+
 header {
-	padding: {
-		top:20px;
-	}													
-	height: 200px;
-	background-color:red;
+	padding-top: 25px;												
+	height: 735px;
+	background-color:black;
 }
 .navbar {
-	a {
-		color:white;
-		border:2px solid black;
-		border-radius:30% 30%;
+	margin-top: 10px;
+		a {
+			color:white;
+		}
+}
+
+.navbar-brand {
+	font: {
+		family:BigJohn;
+		size:25px;
 	}
+}
+.navbar-nav {
+	>li>a {
+		font: {
+			family:OpenSans-regular;
+			size:16px;
+		}
+		padding:5px 10px 5px 10px;
+		border:2px solid transparent;
+		border-radius: 10px;
+		&:hover {
+			background-color: transparent;
+			border:2px solid white;
+		}
+	}
+}
+.header-banner {
+	color:white;
+	text-align: center;
+		&-title {
+			font: {
+				family:SourceSansProLight;
+				size:35px;
+			}
+		}
+
+		&-content {
+			font: {
+				family:OpenSans-regular;
+				size:16px;
+			}
+			margin-top:30px;
+			line-height: 1.75;
+		}
+
+		&-icon {
+			font: {
+				size:35px;
+				
+			}
+		}
 }
 
