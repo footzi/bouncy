@@ -5,12 +5,14 @@
 
 
 header {
-	padding-top: 25px;												
+	padding: 25px 0 25px 0;										
 	height: 735px;
 	background-color:black;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-between;
 }
 .navbar {
-	margin-top: 10px;
 		a {
 			color:white;
 		}
@@ -21,6 +23,9 @@ header {
 		family:BigJohn;
 		size:25px;
 	}
+}
+.navbar-nav {
+	margin-top:10px;
 }
 .navbar-nav {
 	>li>a {
@@ -55,12 +60,29 @@ header {
 			margin-top:30px;
 			line-height: 1.75;
 		}
-
-		&-icon {
-			font: {
-				size:35px;
-				
-			}
-		}
 }
+
+.header-icon {
+	font: {
+		size:35px;
+		
+	}
+
+	&-cicle {
+		width: 30px;
+		height: 30px;
+		border-radius:50%;
+		background-color:#AFEEEE;
+		margin:0 auto;
+		position: relative;
+
+		i {
+			color:white;
+			// position:absolute;
+			// left:0;
+			// right:0;
+		}
+	}
+}
+
 

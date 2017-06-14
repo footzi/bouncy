@@ -6086,18 +6086,22 @@ button.close {
   content: "\e67f"; }
 
 header {
-  padding-top: 25px;
+  padding: 25px 0 25px 0;
   height: 735px;
-  background-color: black; }
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
 
-.navbar {
-  margin-top: 10px; }
-  .navbar a {
-    color: white; }
+.navbar a {
+  color: white; }
 
 .navbar-brand {
   font-family: BigJohn;
   font-size: 25px; }
+
+.navbar-nav {
+  margin-top: 10px; }
 
 .navbar-nav > li > a {
   font-family: OpenSans-regular;
@@ -6120,5 +6124,15 @@ header {
     font-size: 16px;
     margin-top: 30px;
     line-height: 1.75; }
-  .header-banner-icon {
-    font-size: 35px; }
+
+.header-icon {
+  font-size: 35px; }
+  .header-icon-cicle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #AFEEEE;
+    margin: 0 auto;
+    position: relative; }
+    .header-icon-cicle i {
+      color: white; }
