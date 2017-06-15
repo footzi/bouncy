@@ -1,27 +1,45 @@
 @import "components/var";
 @import "components/fonts";
-
 @import "../libs/bootstrap/dist/css/bootstrap.min";
 @import "../libs/pe-icon-7-stroke/pe-icon-7-stroke";
 
 body {
 	line-height: 1.75;
+	font-family: OpenSans-regular;
 }
 .wrapper {
-	padding:100px 0 100px 0;
+	padding:$mainpadding;
+}
+.title {
+	font: {
+		family:SourceSansProLight;
+		size:20px;
+	}
+	color:$title;
 }
 .buttons {
-	font: {
-		family:OpenSans-regular;
-		size:12px;
-	}
+	font-size:12px;
 	border:1px solid $title;
 	border-radius:15px;
 	color:$title;
 	background-color:transparent;
 	padding: 5px 20px 5px 20px;
+}
+.icon {
+	width: 55px;
+	height: 55px;
+	border-radius: 50px;
+	background-color:$accent;
+	font-size: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color:$white;
 
 }
+
+
+//header
 header {						
 	background-image: url("../images/header-bg.jpg");
 	background-size:cover; 
@@ -51,9 +69,7 @@ header {
 }
 .navbar-nav {
 	>li>a {
-		font: {
-			family:OpenSans-regular;
-			size:16px;
+		font-size:16px;
 		}
 		padding:5px 10px 5px 10px;
 		border:2px solid transparent;
@@ -63,7 +79,6 @@ header {
 			border:2px solid white;
 		}
 	}
-}
 .header-banner {
 	color:white;
 	text-align: center;
@@ -75,10 +90,7 @@ header {
 		}
 
 		&-content {
-			font: {
-				family:OpenSans-regular;
-				size:16px;
-			}
+			font-size:16px;
 			margin-top:30px;
 			line-height: 1.75;
 		}
@@ -109,22 +121,14 @@ header {
 
 ///about
 .about {
-	&-text {
-		&-title {
-			font: {
-				family:SourceSansProLight;
-				size:20px;
-			}
-			color:$title;
-		}
+	text-align: center;
 
+	&-text {
 		&-content {
-			font: {
-				family:OpenSans-regular;
-				size:14px;
-			}
+			font-size:14px;
 			color:$text;
 			margin:50px 0 50px 0;
+			text-align: left;
 		}
 	}
 	&-image {
@@ -132,5 +136,25 @@ header {
 			margin: 0 auto;
 		}
 	}
+	&-details {
+		padding: $mainpadding;
+		background-color: $bg;
+
+		&-title-info {
+			font-size:14px;
+			color:$text;
+			margin: 40px 0;
+		}
+		&-title-icons {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+
+			.icon {
+				margin-right: 25px;
+			}
+		}
+	}
+	
 }
 @import "components/media";

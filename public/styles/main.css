@@ -6086,19 +6086,35 @@ button.close {
   content: "\e67f"; }
 
 body {
-  line-height: 1.75; }
+  line-height: 1.75;
+  font-family: OpenSans-regular; }
 
 .wrapper {
   padding: 100px 0 100px 0; }
 
+.title {
+  font-family: SourceSansProLight;
+  font-size: 20px;
+  color: #333b46; }
+
 .buttons {
-  font-family: OpenSans-regular;
   font-size: 12px;
   border: 1px solid #333b46;
   border-radius: 15px;
   color: #333b46;
   background-color: transparent;
   padding: 5px 20px 5px 20px; }
+
+.icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 50px;
+  background-color: #19bd9a;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fffFff; }
 
 header {
   background-image: url("../images/header-bg.jpg");
@@ -6121,13 +6137,13 @@ header {
 .navbar-nav {
   margin-top: 11px; }
 
-.navbar-nav > li > a {
-  font-family: OpenSans-regular;
-  font-size: 16px;
+.navbar-nav {
   padding: 5px 10px 5px 10px;
   border: 2px solid transparent;
   border-radius: 10px; }
-  .navbar-nav > li > a:hover {
+  .navbar-nav > li > a {
+    font-size: 16px; }
+  .navbar-nav:hover {
     background-color: transparent;
     border: 2px solid white; }
 
@@ -6138,7 +6154,6 @@ header {
     font-family: SourceSansProLight;
     font-size: 35px; }
   .header-banner-content {
-    font-family: OpenSans-regular;
     font-size: 16px;
     margin-top: 30px;
     line-height: 1.75; }
@@ -6158,19 +6173,28 @@ header {
       left: 0;
       right: 0; }
 
-.about-text-title {
-  font-family: SourceSansProLight;
-  font-size: 20px;
-  color: #333b46; }
-
-.about-text-content {
-  font-family: OpenSans-regular;
-  font-size: 14px;
-  color: #81868e;
-  margin: 50px 0 50px 0; }
-
-.about-image img {
-  margin: 0 auto; }
+.about {
+  text-align: center; }
+  .about-text-content {
+    font-size: 14px;
+    color: #81868e;
+    margin: 50px 0 50px 0;
+    text-align: left; }
+  .about-image img {
+    margin: 0 auto; }
+  .about-details {
+    padding: 100px 0 100px 0;
+    background-color: #f3f3f3; }
+    .about-details-title-info {
+      font-size: 14px;
+      color: #81868e;
+      margin: 40px 0; }
+    .about-details-title-icons {
+      display: flex;
+      flex-direction: row;
+      justify-content: center; }
+      .about-details-title-icons .icon {
+        margin-right: 25px; }
 
 @media (max-width: 992px) {
   .about-image img {
