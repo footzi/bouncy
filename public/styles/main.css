@@ -6116,6 +6116,11 @@ body {
   justify-content: center;
   color: #fffFff; }
 
+.icon-active {
+  background-color: #fffFff;
+  color: #19bd9a;
+  transition: 0.5s all; }
+
 header {
   background-image: url("../images/header-bg.jpg");
   background-size: cover; }
@@ -6194,7 +6199,11 @@ header {
       flex-direction: row;
       justify-content: center; }
       .about-details-title-icons .icon {
-        margin-right: 25px; }
+        margin-right: 25px;
+        text-decoration: none; }
+
+#mouse, #lamps {
+  display: none; }
 
 @media (max-width: 992px) {
   .about-image img {

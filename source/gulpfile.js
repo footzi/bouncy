@@ -47,6 +47,10 @@ gulp.task("js", function() {
     ])
     .pipe(concat('main.min.js'))
     .pipe(uglify())
+    .on( 'error', notify.onError({
+           title: 'JS Compilation Failed',
+           message: '<%= error.message %>'
+       }) )
     .pipe(gulp.dest('../public/js'))
 })
 

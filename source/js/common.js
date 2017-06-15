@@ -1,9 +1,10 @@
 $(document).ready(function(){
-//    $(window).resize(function() {
-//         var heightScreen = $(window).height();
-//         $("header").css({
-//     		"height":heightScreen
-//         })   	
-//     })
-//     $(window).resize()
+	$(".icon").on("click", function() {
+		$(".icon").removeClass("icon-active");
+		$(this).addClass("icon-active");
+		$(".about-details-content").hide();
+		var select=$(this).attr("href");
+		$(select).fadeIn();
+	})
 });
+

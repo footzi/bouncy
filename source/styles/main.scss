@@ -35,7 +35,11 @@ body {
 	align-items: center;
 	justify-content: center;
 	color:$white;
-
+}
+.icon-active {
+	background-color:$white;
+	color:$accent;
+	transition:0.5s all;
 }
 
 
@@ -152,9 +156,18 @@ header {
 
 			.icon {
 				margin-right: 25px;
+				text-decoration: none;
+
+				
 			}
 		}
 	}
 	
+}
+
+
+
+#mouse, #lamps {
+	display:none;
 }
 @import "components/media";
