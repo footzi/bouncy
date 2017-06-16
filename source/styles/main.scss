@@ -16,14 +16,15 @@ body {
 		size:20px;
 	}
 	color:$title;
+	letter-spacing: 5px;
 }
 .buttons {
-	font-size:12px;
+	font-size:14px;
 	border:1px solid $title;
 	border-radius:15px;
 	color:$title;
 	background-color:transparent;
-	padding: 5px 20px 5px 20px;
+	padding: 5px 30px 5px 30px;
 }
 .icon {
 	width: 55px;
@@ -37,12 +38,16 @@ body {
 	color:$white;
 }
 .icon-active {
-	background-color:$white;
-	color:$accent;
+	background-color:$text;
+	color:$white;
 	transition:0.5s all;
 }
-
-
+.bold-text {
+	color:$bold;
+}
+.color-text {
+	color:$accent;
+}
 //header
 header {						
 	background-image: url("../images/header-bg.jpg");
@@ -53,10 +58,13 @@ header {
 			flex-direction:column;
 			justify-content:space-between;
 			height: 100vh;
-			padding: 25px 0 25px 0;	
+			// height: 108vh;
+			padding: 25px 0 80px 0;	
 		}
 }
+
 .navbar {
+	padding: 0 70px;
 		a {
 			color:white;
 		}
@@ -65,16 +73,17 @@ header {
 .navbar-brand {
 	font: {
 		family:BigJohn;
-		size:25px;
+		size:22px;
 	}
+	margin-top: 12px;
 }
+
 .navbar-nav {
-	margin-top:11px;
+	margin-top:6px;
 }
-.navbar-nav {
-	>li>a {
+
+.navbar-nav>li>a {
 		font-size:16px;
-		}
 		padding:5px 10px 5px 10px;
 		border:2px solid transparent;
 		border-radius: 10px;
@@ -82,20 +91,21 @@ header {
 			background-color: transparent;
 			border:2px solid white;
 		}
-	}
+}
 .header-banner {
 	color:white;
 	text-align: center;
+
 		&-title {
 			font: {
 				family:SourceSansProLight;
 				size:35px;
 			}
+			letter-spacing: 5px;
 		}
 
 		&-content {
 			font-size:16px;
-			margin-top:30px;
 			line-height: 1.75;
 		}
 }
@@ -125,31 +135,39 @@ header {
 
 ///about
 .about {
-	text-align: center;
+	text-align: left;
 
 	&-text {
+		margin-bottom: 100px;
 		&-content {
 			font-size:14px;
 			color:$text;
 			margin:50px 0 50px 0;
-			text-align: left;
 		}
 	}
+
 	&-image {
 		img {
 			margin: 0 auto;
 		}
 	}
+
+	.wrapper-about-details {
+		background-color: $bg;
+	}
+
 	&-details {
 		padding: $mainpadding;
-		background-color: $bg;
+		text-align: center;
 
 		&-title-info {
 			font-size:14px;
 			color:$text;
-			margin: 40px 0;
+			margin-top: 40px;
 		}
+
 		&-title-icons {
+			margin-top:80px; 
 			display: flex;
 			flex-direction: row;
 			justify-content: center;
@@ -157,9 +175,19 @@ header {
 			.icon {
 				margin-right: 25px;
 				text-decoration: none;
-
-				
 			}
+		}
+
+		&-contents {
+			text-align: left;
+			color:$text;
+			font-size: 16px;
+		}
+
+		&-content-title {
+			margin: 50px 0 25px 0;
+			font-size:20px;
+			color:$grey;
 		}
 	}
 	
