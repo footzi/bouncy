@@ -6096,6 +6096,12 @@ body {
   color: #333b46;
   letter-spacing: 5px; }
 
+.title-info {
+  font-family: SourceSansProLight;
+  font-size: 14px;
+  color: #81868e;
+  margin-top: 40px; }
+
 .buttons {
   font-size: 14px;
   border: 1px solid #333b46;
@@ -6200,18 +6206,15 @@ header {
   .about-details {
     padding: 80px 0 80px 0;
     text-align: center; }
-    .about-details-title-info {
-      font-size: 14px;
-      color: #81868e;
-      margin-top: 40px; }
     .about-details-title-icons {
       margin-top: 80px;
       display: flex;
       flex-direction: row;
       justify-content: center; }
       .about-details-title-icons .icon {
-        margin-right: 25px;
-        text-decoration: none; }
+        margin-right: 25px; }
+        .about-details-title-icons .icon:last-child {
+          margin-right: 0; }
     .about-details-contents {
       text-align: left;
       color: #81868e;
@@ -6223,6 +6226,43 @@ header {
 
 #mouse, #lamps {
   display: none; }
+
+.multi-item-carousel .carousel-inner > .item {
+  transition: 500ms ease-in-out left; }
+
+.multi-item-carousel .carousel-inner .active .left {
+  left: -33%; }
+
+.multi-item-carousel .carousel-inner .active .right {
+  left: 33%; }
+
+.multi-item-carousel .carousel-inner .next {
+  left: 33%; }
+
+.multi-item-carousel .carousel-inner .prev {
+  left: -33%; }
+
+@media all and (transform-3d), (-webkit-transform-3d) {
+  .multi-item-carousel .carousel-inner > .item {
+    transition: 500ms ease-in-out left;
+    transition: 500ms ease-in-out all;
+    backface-visibility: visible;
+    transform: none !important; } }
+
+.multi-item-carousel .carouse-control.left, .multi-item-carousel .carouse-control.right {
+  background-image: none; }
+
+body {
+  background: #333;
+  color: #ddd; }
+
+h1 {
+  color: white;
+  font-size: 2.25em;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  text-shadow: 0px 2px 0px black; }
 
 @media (max-width: 992px) {
   .about-image img {
