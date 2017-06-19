@@ -120,32 +120,33 @@ html
 						blanditiis praesentium
 					.featured-carousel
 
-						.carousel.slide#featured-carousel(data-ride="carousel")
-							//- ol.carousel-indicators
-							//- 	li.active(data-target="#featured-carousel" data-slide-to="0")
-							//- 	li(data-target="#featured-carousel" data-slide-to="1")
+						.carousel.slide#featured-carousel(data-ride="carousel" data-interval="99999")
 							.carousel-inner(role="listbox")
 								.item.active
 									row
-										.col-lg-6.featured-carousel-slide
+										.col-lg-6.col-md-6.col-sm-12.col-xs-12.featured-carousel-slide
 											img.img-responsive(src="images/1.jpg")
-										.col-lg-3.featured-carousel-slide
+										.col-lg-3.col-md-3.col-sm-6.col-xs-6.featured-carousel-slide
 											img.img-responsive(src="images/2.jpg")
-										.col-lg-3.featured-carousel-slide
+											.featured-carousel-slide-text 
+												p какой то текст
+										.col-lg-3.col-md-3.col-sm-6.col-xs-6.featured-carousel-slide
 											img.img-responsive(src="images/3.jpg")
-								.item
-									row
-										.col-lg-6.featured-carousel-slide
-											img.img-responsive(src="images/1.jpg")
-										.col-lg-3.featured-carousel-slide
-											img.img-responsive(src="images/2.jpg")
-										.col-lg-3.featured-carousel-slide
-											img.img-responsive(src="images/3.jpg")
-								
-							
-							//- .left-carousel-control( href="#featured-carousel" role="button" data-slide="prev")
-							//- <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-							//- 	span.
+											.featured-carousel-slide-text 
+												p какой то текст
+								//- .item
+								//- 	row
+								//- 		.col-lg-6.col-md-6.col-sm-12.col-xs-12.featured-carousel-slide
+								//- 			img.img-responsive(src="images/1.jpg")
+								//- 		.col-lg-3.col-md-3.col-sm-6.col-xs-6.featured-carousel-slide
+								//- 			img.img-responsive(src="images/2.jpg")
+								//- 		.col-lg-3.col-md-3.col-sm-6.col-xs-6.featured-carousel-slide
+								//- 			img.img-responsive(src="images/3.jpg")
+<div class="wrapper">
+<div class="pie spinner"></div>
+<div class="pie filler"></div>
+<div class="mask"></div>
+</div>
 		script(src="js/main.min.js")
 
 
