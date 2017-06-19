@@ -119,61 +119,33 @@ html
 						At vero eos et accusamus et iusto odio dignissimos ducimus qui
 						blanditiis praesentium
 					.featured-carousel
-						.container
-							.row
-								.col-md-12
-									.carousel.slide.multi-item-carousel#theCarousel
-										.carousel-inner
-											.item.active
-												.col-xs-4
-													a(href="#1")
-														img.img-responsive(src="images/ipad.png")
-											.item
-												.col-xs-4
-													a(href="#1")
-														img.img-responsive(src="images/ipad.png")
-											.item
-												.col-xs-4
-													a(href="#1")
-														img.img-responsive(src="images/ipad.png")
-											.item
-												.col-xs-4
-													a(href="#1")
-														img.img-responsive(src="images/ipad.png")
 
-//- <div class="container">
-//- <div class="row">
-//- <div class="col-md-12">
-//- <div class="carousel slide multi-item-carousel" id="theCarousel">
-//- <div class="carousel-inner">
-//- <div class="item active">
-//- <div class="col-xs-4"><a href="#1"><img src="http://placehold.it/300/f44336/000000" class="img-responsive"></a></div>
-//- </div>
-//- <div class="item">
-//- <div class="col-xs-4"><a href="#1"><img src="http://placehold.it/300/e91e63/000000" class="img-responsive"></a></div>
-//- </div>
-//- <div class="item">
-//- <div class="col-xs-4"><a href="#1"><img src="http://placehold.it/300/9c27b0/000000" class="img-responsive"></a></div>
-//- </div>
-//- <div class="item">
-//- <div class="col-xs-4"><a href="#1"><img src="http://placehold.it/300/673ab7/000000" class="img-responsive"></a></div>
-//- </div>
-//- <div class="item">
-//- <div class="col-xs-4"><a href="#1"><img src="http://placehold.it/300/4caf50/000000" class="img-responsive"></a></div>
-//- </div>
-//- <div class="item">
-//- <div class="col-xs-4"><a href="#1"><img src="http://placehold.it/300/8bc34a/000000" class="img-responsive"></a></div>
-//- </div>
-//- <div class="item">
-//- <div class="col-xs-4"><a href="#1"><img src="http://placehold.it/300/8bc34a/000000" class="img-responsive"></a></div>
-//- </div>
-//- </div>
-//- <a class="left carousel-control" href="#theCarousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
-//- <a class="right carousel-control" href="#theCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
-//- </div>
-//- </div>
-//- </div>
-//- </div>
+						.carousel.slide#featured-carousel(data-ride="carousel")
+							//- ol.carousel-indicators
+							//- 	li.active(data-target="#featured-carousel" data-slide-to="0")
+							//- 	li(data-target="#featured-carousel" data-slide-to="1")
+							.carousel-inner(role="listbox")
+								.item.active
+									row
+										.col-lg-6.featured-carousel-slide
+											img.img-responsive(src="images/1.jpg")
+										.col-lg-3.featured-carousel-slide
+											img.img-responsive(src="images/2.jpg")
+										.col-lg-3.featured-carousel-slide
+											img.img-responsive(src="images/3.jpg")
+								.item
+									row
+										.col-lg-6.featured-carousel-slide
+											img.img-responsive(src="images/1.jpg")
+										.col-lg-3.featured-carousel-slide
+											img.img-responsive(src="images/2.jpg")
+										.col-lg-3.featured-carousel-slide
+											img.img-responsive(src="images/3.jpg")
+								
+							
+							//- .left-carousel-control( href="#featured-carousel" role="button" data-slide="prev")
+							//- <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+							//- 	span.
 		script(src="js/main.min.js")
 
 
