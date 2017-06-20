@@ -5,4 +5,18 @@
     .about-details-content-title-text {
         margin-top: 10px;
     }
+    .featured-text {
+        height: 150px;
+    }
+    .featured-text-content {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .featured-text-content-button {
+        margin-top: 20px;
+    }
+}
+@media (max-width:767px) {
+    
+
 }
