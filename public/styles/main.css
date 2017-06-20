@@ -6164,7 +6164,7 @@ header {
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
-    padding: 25px 0 80px 0; }
+    padding: 25px 0 35px 0; }
 
 .navbar {
   padding: 0 70px; }
@@ -6196,6 +6196,7 @@ header {
     font-size: 35px;
     letter-spacing: 5px; }
   .header-banner-content {
+    margin-top: 20px;
     font-size: 16px;
     line-height: 1.75; }
 
@@ -6230,14 +6231,14 @@ header {
     padding: 80px 0 80px 0;
     text-align: center; }
     .about-details-title-icons {
-      margin-top: 80px;
-      display: flex;
-      flex-direction: row;
-      justify-content: center; }
+      margin-top: 80px; }
+      .about-details-title-icons ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center; }
       .about-details-title-icons .icon {
-        margin-right: 25px; }
-        .about-details-title-icons .icon:last-child {
-          margin-right: 0; }
+        text-decoration: none;
+        margin: 0 12px; }
     .about-details-contents {
       text-align: left;
       color: #81868e;
@@ -6246,9 +6247,6 @@ header {
       margin: 50px 0 25px 0;
       font-size: 20px;
       color: #464646; }
-
-#mouse, #lamps {
-  display: none; }
 
 .featured {
   text-align: center; }
@@ -6305,10 +6303,12 @@ header {
     .services-content-icon {
       display: flex;
       flex-direction: column; }
-      .services-content-icon .icon {
+      .services-content-icon li {
         margin-bottom: 15px; }
-        .services-content-icon .icon:last-child {
+        .services-content-icon li:last-child {
           margin-bottom: 0; }
+      .services-content-icon .icon {
+        text-decoration: none; }
     .services-content-items {
       text-align: left; }
       .services-content-items-title {

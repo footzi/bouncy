@@ -43,6 +43,7 @@ gulp.task("js", function() {
     return gulp.src([
         'libs/jquery/dist/jquery.min.js',
         'libs/bootstrap/dist/js/bootstrap.min.js',
+        'libs/radialIndicator/radialIndicator.min.js',
         'js/common.js'
     ])
     .pipe(concat('main.min.js'))
@@ -83,7 +84,7 @@ gulp.task('browserSync', function() {
 
 //watch
 gulp.task('watch', ['browserSync','sass'], function(){
-    gulp.watch('templates/*', ['pug'])
+    gulp.watch('templates/**/*', ['pug'])
     gulp.watch('styles/**/*.scss', ['sass'])
     gulp.watch('js/**/*.js', ['js'])
     gulp.watch('images/**/*', ['image'])
