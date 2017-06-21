@@ -1,13 +1,18 @@
 $(document).ready(function(){
 
-	$("#governance, #creative").hide();
+	$("#governance, #creative, #graphic, #game, #full").hide();
 	
 	$(".icon").on("click", function() {
-		$(".icon").removeClass("icon-active");
-		$(this).addClass("icon-active");
-		$(".about-details-content").hide();
 		var select=$(this).attr("data-link");
-		console.log(select)
+		if ((select == "#customer")||(select == "#governance")||(select == "#creative")) {
+			$(".about-details-icons .icon").removeClass("icon-active");
+			$(this).addClass("icon-active");
+			$(".about-details-content").hide()
+		} else {
+			$(".services-content-icon .icon").removeClass("icon-active");
+			$(this).addClass("icon-active");
+			$(".services-content-item").hide()
+		}
 		$(select).fadeIn();
 	})
 

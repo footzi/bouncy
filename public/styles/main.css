@@ -6141,6 +6141,9 @@ body {
   justify-content: center;
   color: #fffFff; }
 
+a:hover {
+  color: #fffFff; }
+
 .icon-active {
   background-color: #81868e;
   color: #fffFff;
@@ -6230,13 +6233,13 @@ header {
   .about-details {
     padding: 80px 0 80px 0;
     text-align: center; }
-    .about-details-title-icons {
+    .about-details-icons {
       margin-top: 80px; }
-      .about-details-title-icons ul {
+      .about-details-icons ul {
         display: flex;
         flex-direction: row;
         justify-content: center; }
-      .about-details-title-icons .icon {
+      .about-details-icons .icon {
         text-decoration: none;
         margin: 0 12px; }
     .about-details-contents {
@@ -6299,7 +6302,7 @@ header {
 .services {
   text-align: center; }
   .services-content {
-    margin: 40px; }
+    margin-top: 40px; }
     .services-content-icon {
       display: flex;
       flex-direction: column; }
@@ -6310,27 +6313,35 @@ header {
       .services-content-icon .icon {
         text-decoration: none; }
     .services-content-items {
+      margin-left: 20px;
       text-align: left; }
       .services-content-items-title {
         font-size: 20px;
         color: #464646; }
       .services-content-items p {
-        font-size: 16;
+        font-size: 16px;
         color: #81868e;
         margin-top: 20px;
         line-height: 1.75; }
+    .services-content-charts {
+      display: flex;
+      flex-direction: row;
+      align-items: center; }
+      .services-content-charts .chart {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 30px 10px 0 10px; }
+        .services-content-charts .chart-text {
+          font-size: 20px;
+          position: absolute; }
+          .services-content-charts .chart-text i {
+            font-size: 10px; }
+        .services-content-charts .chart p {
+          position: absolute;
+          bottom: -30px; }
 
-.chart {
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-  .chart-text {
-    font-size: 20px;
-    position: absolute; }
-    .chart-text i {
-      font-size: 10px; }
-
-@media (max-width: 992px) {
+@media only screen and (max-width: 992px) {
   .about-image img {
     margin-top: 10px; }
   .about-details-content-title-text {
@@ -6341,4 +6352,22 @@ header {
     flex-direction: column;
     justify-content: center; }
   .featured-text-content-button {
-    margin-top: 20px; } }
+    margin-top: 20px; }
+  .services-content-icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    .services-content-icon .icon {
+      margin: 0 30px; }
+  .services-content-charts {
+    justify-content: center; } }
+
+@media only screen and (max-width: 425px) {
+  .services-content-icon {
+    margin: 0 10px; } }
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+/* Small devices (tablets, 768px and up) */
+/* Medium devices (desktops, 992px and up) */
+/* Large devices (large desktops, 1200px and up) */

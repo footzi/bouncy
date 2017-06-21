@@ -46,6 +46,9 @@ body {
 	justify-content: center;
 	color:$white;
 }
+a:hover {
+	color:$white;
+}
 .icon-active {
 	background-color:$text;
 	color:$white;
@@ -174,7 +177,7 @@ header {
 		padding: $mainpadding;
 		text-align: center;
 
-		&-title-icons {
+		&-icons {
 			margin-top:80px; 
 			
 			ul {
@@ -283,7 +286,7 @@ header {
 	text-align: center;
 
 	&-content {
-		margin: $contentmargin;
+		margin-top: $contentmargin;
 
 		&-icon {
 			display: flex;
@@ -302,6 +305,7 @@ header {
 		}
 
 		&-items {
+			margin-left: 20px;
 			text-align: left;
 
 			&-title {
@@ -309,28 +313,41 @@ header {
 				color:$grey;
 			}
 			p {
-				font-size:16;
+				font-size:16px;
 				color:$text;
 				margin-top: 20px;
 				line-height: 1.75;
 			}
 		}
-	}
-}
+		&-charts {
+			display:flex;
+			flex-direction: row;
+			align-items: center;
 
-.chart {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+			.chart {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin: 30px 10px 0 10px;
 
-	&-text {
-		font-size: 20px;
-		position: absolute;
+				&-text {
+					font-size: 20px;
+					position: absolute;
 
-		i {
-			font-size: 10px;
+					i {
+						font-size: 10px;
+					}	
+				}
+				p {
+					position: absolute;
+					bottom: -30px;
+				}
+
+			}			
 		}
 	}
 }
+
+
 
 @import "components/media";
