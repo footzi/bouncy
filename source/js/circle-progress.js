@@ -28,4 +28,5 @@ c1.circleProgress({
 	}).on('circle-animation-progress', function(event, progress) {
 		$(this).find('strong').html(Math.round(100 * progress) + '<i>%</i>');
 	});
+    
  setInterval(function() { c1.circleProgress(),c2.circleProgress(),c3.circleProgress(); }, 8000);
