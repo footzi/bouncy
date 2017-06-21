@@ -6320,6 +6320,16 @@ header {
         margin-top: 20px;
         line-height: 1.75; }
 
+.chart {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .chart-text {
+    font-size: 20px;
+    position: absolute; }
+    .chart-text i {
+      font-size: 10px; }
+
 @media (max-width: 992px) {
   .about-image img {
     margin-top: 10px; }

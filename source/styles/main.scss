@@ -318,4 +318,19 @@ header {
 	}
 }
 
+.chart {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&-text {
+		font-size: 20px;
+		position: absolute;
+
+		i {
+			font-size: 10px;
+		}
+	}
+}
+
 @import "components/media";

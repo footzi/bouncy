@@ -43,8 +43,9 @@ gulp.task("js", function() {
     return gulp.src([
         'libs/jquery/dist/jquery.min.js',
         'libs/bootstrap/dist/js/bootstrap.min.js',
-        'libs/radialIndicator/radialIndicator.min.js',
-        'js/common.js'
+        // 'libs/radialIndicator/radialIndicator.min.js',
+        'libs/jquery-circle-progress/dist/circle-progress.min.js',
+        'js/*'
     ])
     .pipe(concat('main.min.js'))
     .pipe(uglify())
@@ -90,7 +91,7 @@ gulp.task('watch', ['browserSync','sass'], function(){
     gulp.watch('images/**/*', ['image'])
     gulp.watch('fonts/**/*', ['fonts'])
     gulp.watch('../public/*.html', browserSync.reload)
-    gulp.watch('../public/js/*.js', browserSync.reload)
+    gulp.watch('../public/js/**/*', browserSync.reload)
 });
 
 gulp.task("default",["watch"])
