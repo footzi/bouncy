@@ -3,22 +3,82 @@
     h3.porfolio-title.title-info.
         At vero eos et accusamus et iusto odio dignissimos ducimus qui
         blanditiis praesentium
-    .porfolio-content
+    .portfolio-content
         .container
             .row-fluid
-                nav.col-lg-6.col-lg-offset-2.col-md-6.col-md-offset-2
-                    ul.portfolio-nav
-                        li
-                            a All Works
-                        li
-                            a Print
-                        li
-                            a Identify
-                        li
-                            a Branding
-                        li
-                            a Web
-                        li
-                            a HTML
-                        li
-                            a Wordpress
+                nav.col-lg-8.col-lg-offset-2.col-md-8.col-md-offset-2
+                    #options
+                        #filters
+                            ul.portfolio-nav
+                                li
+                                    a.is-checked(data-filter="*") All Works
+                                li
+                                    a(data-filter=".print") Print
+                                li
+                                    a(data-filter=".identify") Identify
+                                li
+                                    a Branding
+                                li
+                                    a Web
+                                li
+                                    a HTML
+                                li
+                                    a Wordpress
+        .container
+            .row-fluid
+                .col-lg-10.col-lg-offset-1.col-md-10.col-md-offset-1.portfolio-products
+                    .row-fluid
+                        .col-md-3.col-sm-6.col-xs-6
+                            .isotope
+                                .portfolio-products-item.item.print
+                                    img.img-responsive(src="images/portfolio/1.jpg")
+                                    .portfolio-products-item-info
+                                        h4 WEB DESIGN
+                                            div
+                                        p.
+                                            At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                                            blanditiis praesentium
+                                        .portfolio-products-item-info-icons
+                                            .icon.item-icon
+                                                i.pe-7s-tools
+                                            .icon.item-icon
+                                                i.pe-7s-tools   
+                                .portfolio-products-item.item.identify
+                                    img.img-responsive(src="images/portfolio/5.jpg")
+                                    .portfolio-products-item-info
+                                        h4 HTML
+                                        p.
+                                            At vero eos et accusamus et iusto odio dignissimos ducimus qui
+                                            blanditiis praesentium
+                                        .portfolio-products-item-info-icons
+                                            .icon.item-icon
+                                                i.pe-7s-tools
+                                            .icon.item-icon
+                                                i.pe-7s-tools
+                        //-     .portfolio-products-item
+                        //-         img.img-responsive(src="images/portfolio/9.jpg")  
+                        //- .col-md-3.col-sm-6.col-xs-6
+                        //-     .portfolio-products-item
+                        //-         img.img-responsive(src="images/portfolio/2.jpg")
+                        //-     .portfolio-products-item
+                        //-         img.img-responsive(src="images/portfolio/6.jpg")
+                        //-     .portfolio-products-item
+                        //-         img.img-responsive(src="images/portfolio/10.jpg")
+                        //- .col-md-3.col-sm-6.col-xs-6
+                        //-     .portfolio-products-item
+                        //-         img.img-responsive(src="images/portfolio/3.jpg")
+                        //-     .portfolio-products-item
+                        //-         img.img-responsive(src="images/portfolio/7.jpg")
+                        //-     .portfolio-products-item
+                        //-         img.img-responsive(src="images/portfolio/11.jpg")
+                        //- .col-md-3.col-sm-6.col-xs-6
+                        //-     .portfolio-products-item
+                        //-         img.img-responsive(src="images/portfolio/4.jpg")
+                        //-     .portfolio-products-item
+                        //-         img.img-responsive(src="images/portfolio/8.jpg")
+                        //-     .portfolio-products-item
+                        //-         img.img-responsive(src="images/portfolio/12.jpg")
+
+
+
+

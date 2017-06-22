@@ -16,5 +16,18 @@ $(document).ready(function(){
 		$(select).fadeIn();
 	})
 
+	
+        var $container = $('.isotope');
+        $('#filters a').click(function(){
+            var $this = $(this);
+            if ( !$this.hasClass('is-checked') ) {
+                $this.parents('#options').find('.is-checked').removeClass('is-checked');
+                $this.addClass('is-checked');
+                }
+            var selector = $this.attr('data-filter');
+            $container.isotope({  itemSelector: '.item', filter: selector });
+            return false;
+        });
+    
 });
 

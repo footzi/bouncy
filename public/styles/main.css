@@ -6374,16 +6374,80 @@ header {
     position: absolute;
     top: -150px; }
 
-.portfolio .wrapper {
-  background-color: #f3f3f3; }
-
-.portfolio-content {
-  margin-top: 80px; }
-
-.portfolio-nav a {
-  color: #464646;
-  text-decoration: none;
-  font-size: 16px; }
+.portfolio {
+  text-align: center; }
+  .portfolio .wrapper {
+    background-color: #f3f3f3; }
+  .portfolio-content {
+    margin-top: 80px; }
+  .portfolio-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    .portfolio-nav li {
+      margin-right: 30px; }
+      .portfolio-nav li:last-child {
+        margin-right: 0; }
+    .portfolio-nav a {
+      color: #464646;
+      text-decoration: none;
+      font-size: 16px; }
+  .portfolio-products {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .portfolio-products-item {
+      margin: 5px;
+      position: relative; }
+      .portfolio-products-item img {
+        margin: 0 auto; }
+      .portfolio-products-item-info {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0 20px;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #fffFff;
+        display: flex;
+        text-align: left;
+        flex-direction: column;
+        justify-content: center;
+        transition: opacity 0.8s; }
+        .portfolio-products-item-info h4 {
+          color: #19bd9a; }
+          .portfolio-products-item-info h4 div {
+            margin-left: 50px;
+            margin-top: 10px;
+            height: 1px;
+            width: 20px;
+            background-color: #19bd9a;
+            transition: margin-left ease-out 0.5s; }
+        .portfolio-products-item-info p {
+          margin-top: 20px; }
+        .portfolio-products-item-info-icons {
+          margin-top: 30px;
+          display: flex;
+          position: relative;
+          top: 30px;
+          transition: top ease-out 0.5s; }
+          .portfolio-products-item-info-icons .item-icon {
+            background-color: #000000;
+            width: 25px;
+            height: 25px; }
+            .portfolio-products-item-info-icons .item-icon:last-child {
+              margin-left: 5px; }
+            .portfolio-products-item-info-icons .item-icon i {
+              font-size: 15px; }
+      .portfolio-products-item:hover .portfolio-products-item-info {
+        opacity: 1; }
+      .portfolio-products-item:hover .portfolio-products-item-info-icons {
+        top: 0; }
+      .portfolio-products-item:hover .portfolio-products-item-info h4 div {
+        margin-left: 0; }
 
 @media only screen and (max-width: 992px) {
   .about-image img {
