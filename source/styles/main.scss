@@ -45,6 +45,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	color:$white;
+	cursor: pointer;
 }
 a:hover {
 	color:$white;
@@ -320,9 +321,9 @@ header {
 			}
 		}
 		&-charts {
-			display:flex;
+			display: flex;
 			flex-direction: row;
-			align-items: center;
+			justify-content: center;
 
 			.chart {
 				display: flex;
@@ -331,23 +332,90 @@ header {
 				margin: 30px 10px 0 10px;
 
 				&-text {
-					font-size: 20px;
+					font-size: 25px;
 					position: absolute;
+					color: $text;
 
 					i {
-						font-size: 10px;
+
+						font-size: 14px;
 					}	
 				}
 				p {
+					font: {
+						family: RobotoLight;
+						size: 16px;
+					}
 					position: absolute;
-					bottom: -30px;
+					bottom: -40px;
+					color: $text;
 				}
-
 			}			
 		}
 	}
 }
 
+//slogan
 
+.slogan {
+	background-image: url("../images/slogan-bg.jpg");
+	@extend .background;
 
+	.wrapper {
+		background-color:rgba($black, .8);
+	}
+	&-title {
+		font: {
+			family: SourceSansProLight;
+			size: 20px;
+		}
+		color: #f3f3f3;
+		letter-spacing: 5px;
+	}
+
+	&-text {
+		margin-top: $contentmargin;
+		color: #b2b3b3;
+		line-height: 1.75;
+	}
+	&-sign {
+		margin-top: 30px;
+		color: #b2b3b3;
+		font-size: 14px;
+
+		&-name {
+			font-weight: 800;
+			margin-bottom: 10px;
+
+		}
+	}
+	&-img {
+		img {
+			position: absolute;
+			top:-150px;
+		}
+	}
+}
+
+//portfolio
+
+.portfolio {
+	.wrapper {
+		background-color: $bg;
+	}
+
+	&-content {
+		margin-top: 80px;
+	}
+
+	&-nav {
+		a {
+			color:$grey;
+			text-decoration: none;
+			font-size: 16px;
+		}
+	}
+
+}
 @import "components/media";
+

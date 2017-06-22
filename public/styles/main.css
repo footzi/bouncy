@@ -10,6 +10,10 @@
   font-family: SourceSansProLight;
   src: url("../fonts/SourceSansProLight.ttf"); }
 
+@font-face {
+  font-family: RobotoLight;
+  src: url("../fonts/RobotoLight.ttf"); }
+
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -6139,7 +6143,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fffFff; }
+  color: #fffFff;
+  cursor: pointer; }
 
 a:hover {
   color: #fffFff; }
@@ -6155,7 +6160,7 @@ a:hover {
 .color-text {
   color: #19bd9a; }
 
-.background, header, .featured-carousel-slide-img-1, .featured-carousel-slide-img-2, .featured-carousel-slide-img-3, .featured-carousel-slide-img-4, .featured-carousel-slide-img-5, .featured-carousel-slide-img-6, .featured-text {
+.background, header, .featured-carousel-slide-img-1, .featured-carousel-slide-img-2, .featured-carousel-slide-img-3, .featured-carousel-slide-img-4, .featured-carousel-slide-img-5, .featured-carousel-slide-img-6, .featured-text, .slogan {
   background-size: cover;
   background-position: center; }
 
@@ -6326,20 +6331,59 @@ header {
     .services-content-charts {
       display: flex;
       flex-direction: row;
-      align-items: center; }
+      justify-content: center; }
       .services-content-charts .chart {
         display: flex;
         align-items: center;
         justify-content: center;
         margin: 30px 10px 0 10px; }
         .services-content-charts .chart-text {
-          font-size: 20px;
-          position: absolute; }
-          .services-content-charts .chart-text i {
-            font-size: 10px; }
-        .services-content-charts .chart p {
+          font-size: 25px;
           position: absolute;
-          bottom: -30px; }
+          color: #81868e; }
+          .services-content-charts .chart-text i {
+            font-size: 14px; }
+        .services-content-charts .chart p {
+          font-family: RobotoLight;
+          font-size: 16px;
+          position: absolute;
+          bottom: -40px;
+          color: #81868e; }
+
+.slogan {
+  background-image: url("../images/slogan-bg.jpg"); }
+  .slogan .wrapper {
+    background-color: rgba(0, 0, 0, 0.8); }
+  .slogan-title {
+    font-family: SourceSansProLight;
+    font-size: 20px;
+    color: #f3f3f3;
+    letter-spacing: 5px; }
+  .slogan-text {
+    margin-top: 40px;
+    color: #b2b3b3;
+    line-height: 1.75; }
+  .slogan-sign {
+    margin-top: 30px;
+    color: #b2b3b3;
+    font-size: 14px; }
+    .slogan-sign-name {
+      font-weight: 800;
+      margin-bottom: 10px; }
+  .slogan-img img {
+    position: absolute;
+    top: -150px; }
+
+.portfolio .wrapper {
+  background-color: #f3f3f3; }
+
+.portfolio-content {
+  margin-top: 80px; }
+
+.portfolio-nav a {
+  color: #464646;
+  text-decoration: none;
+  font-size: 16px; }
 
 @media only screen and (max-width: 992px) {
   .about-image img {
@@ -6360,14 +6404,20 @@ header {
     .services-content-icon .icon {
       margin: 0 30px; }
   .services-content-charts {
-    justify-content: center; } }
+    justify-content: center; }
+  .slogan-img img {
+    position: relative;
+    top: 40px;
+    margin: 0 auto; } }
 
-@media only screen and (max-width: 425px) {
-  .services-content-icon {
+@media only screen and (max-width: 768px) {
+  .services-content-icon .icon {
     margin: 0 10px; } }
 
-/* Extra small devices (phones, less than 768px) */
-/* No media query since this is the default in Bootstrap */
-/* Small devices (tablets, 768px and up) */
-/* Medium devices (desktops, 992px and up) */
-/* Large devices (large desktops, 1200px and up) */
+@media only screen and (max-width: 480px) {
+  .services-content-charts .chart {
+    margin: 10px 5px 0 5px; } }
+
+@media only screen and (max-width: 320px) {
+  .services-content-charts .chart {
+    margin: 10px 2px 0 2px; } }

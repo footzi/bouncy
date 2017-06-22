@@ -43,8 +43,8 @@ gulp.task("js", function() {
     return gulp.src([
         'libs/jquery/dist/jquery.min.js',
         'libs/bootstrap/dist/js/bootstrap.min.js',
-        // 'libs/radialIndicator/radialIndicator.min.js',
         'libs/jquery-circle-progress/dist/circle-progress.min.js',
+        'libs/isotope/dist/isotope.pkgd.min.js',
         'js/*'
     ])
     .pipe(concat('main.min.js'))

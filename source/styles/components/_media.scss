@@ -30,23 +30,39 @@
         justify-content: center;
     }
 
+    .slogan-img {
+        img {
+            position: relative;
+            top:40px;
+            margin: 0 auto;
+        }
+    }
+
 }
 
-
-@media only screen and (max-width:425px) {
+@media only screen and (max-width:768px) {
     .services-content-icon {
-        margin:0 10px;
+        .icon {
+            margin:0 10px;
+        }
+    
+    
+        
     }
 }
-/* Extra small devices (phones, less than 768px) */
-/* No media query since this is the default in Bootstrap */
 
-/* Small devices (tablets, 768px and up) */
-//@media (min-width: 320px) { ... }
-//@media (min-width: 768px) { ... }
+@media only screen and (max-width:480px) {
+    .services-content-charts {
+        .chart {
+            margin: 10px 5px 0 5px;
+        }
+    }
+}
 
-/* Medium devices (desktops, 992px and up) */
-//@media (min-width: 992px) { ... }
-
-/* Large devices (large desktops, 1200px and up) */
-// @media (min-width: 1200px) { ... }
+@media only screen and (max-width:320px) {
+    .services-content-charts {
+        .chart {
+            margin: 10px 2px 0 2px;
+        }
+    }
+}
