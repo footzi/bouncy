@@ -6164,6 +6164,16 @@ a:hover {
   background-size: cover;
   background-position: center; }
 
+.is-checked:after {
+  content: "";
+  height: 2px;
+  display: block;
+  margin: 10px 10px 0 10px;
+  background-color: #19bd9a; }
+
+a {
+  cursor: pointer; }
+
 header {
   background-image: url("../images/header-bg.jpg"); }
   header-wrapper {
@@ -6259,7 +6269,7 @@ header {
 .featured {
   text-align: center; }
   .featured-carousel {
-    margin-top: 40px; }
+    margin-top: 50px; }
     .featured-carousel-slide {
       height: 320px; }
       .featured-carousel-slide-img-1, .featured-carousel-slide-img-2, .featured-carousel-slide-img-3, .featured-carousel-slide-img-4, .featured-carousel-slide-img-5, .featured-carousel-slide-img-6 {
@@ -6307,7 +6317,7 @@ header {
 .services {
   text-align: center; }
   .services-content {
-    margin-top: 40px; }
+    margin-top: 50px; }
     .services-content-icon {
       display: flex;
       flex-direction: column; }
@@ -6360,7 +6370,7 @@ header {
     color: #f3f3f3;
     letter-spacing: 5px; }
   .slogan-text {
-    margin-top: 40px;
+    margin-top: 50px;
     color: #b2b3b3;
     line-height: 1.75; }
   .slogan-sign {
@@ -6379,13 +6389,15 @@ header {
   .portfolio .wrapper {
     background-color: #f3f3f3; }
   .portfolio-content {
-    margin-top: 80px; }
+    margin-top: 50px; }
   .portfolio-nav {
     display: flex;
     flex-direction: row;
-    justify-content: center; }
+    justify-content: center;
+    flex-wrap: wrap; }
     .portfolio-nav li {
-      margin-right: 30px; }
+      margin: 0 20px;
+      margin-bottom: 10px; }
       .portfolio-nav li:last-child {
         margin-right: 0; }
     .portfolio-nav a {
@@ -6393,10 +6405,7 @@ header {
       text-decoration: none;
       font-size: 16px; }
   .portfolio-products {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; }
+    margin-top: 30px; }
     .portfolio-products-item {
       margin: 5px;
       position: relative; }
@@ -6448,6 +6457,11 @@ header {
         top: 0; }
       .portfolio-products-item:hover .portfolio-products-item-info h4 div {
         margin-left: 0; }
+  .portfolio .isotope {
+    display: flex; }
+    .portfolio .isotope div {
+      display: flex;
+      flex-direction: column; }
 
 @media only screen and (max-width: 992px) {
   .about-image img {

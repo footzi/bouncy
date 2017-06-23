@@ -45,6 +45,7 @@ gulp.task("js", function() {
         'libs/bootstrap/dist/js/bootstrap.min.js',
         'libs/jquery-circle-progress/dist/circle-progress.min.js',
         'libs/isotope/dist/isotope.pkgd.min.js',
+        'libs/masonry/masonry.pkgd.min.js',
         'js/*'
     ])
     .pipe(concat('main.min.js'))

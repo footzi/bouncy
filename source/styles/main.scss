@@ -65,6 +65,16 @@ a:hover {
 	background-size:cover;
 	background-position: center;
 }
+.is-checked:after {
+	content: "";
+	height: 2px;
+	display: block;
+	margin: 10px 10px 0 10px;
+	background-color: $accent;
+}
+a {
+	cursor: pointer;
+}
 //header
 header {						
 	background-image: url("../images/header-bg.jpg");
@@ -407,16 +417,18 @@ header {
 	}
 
 	&-content {
-		margin-top: 80px;
+		margin-top: $contentmargin;
 	}
 
 	&-nav {
 			display: flex;
 			flex-direction: row;
 			justify-content: center;
+			flex-wrap: wrap;
 
 			li {
-				margin-right: 30px;
+				margin: 0 20px;
+				margin-bottom: 10px;
 
 				&:last-child {
 					margin-right: 0;
@@ -427,17 +439,18 @@ header {
 			color:$grey;
 			text-decoration: none;
 			font-size: 16px;
+
 		}
 	}
 	&-products {
-		margin-top: 20px;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
+		margin-top: 30px;
+		// display: flex;
+		// flex-direction: row;
 		
 		&-item {
 			margin: 5px;
 			position: relative;
+			// width: 20%;
 
 			img {
 				margin: 0 auto;
@@ -511,7 +524,20 @@ header {
 		}
 	}
 
+.isotope {
+	display: flex;
+	// flex-direction: row;
+	// flex-wrap: wrap;
+	div {
+		display: flex;
+		flex-direction: column;
+	}
 
+}
+
+// .per {
+// 	width: 25%;
+// }
 }
 @import "components/media";
 
