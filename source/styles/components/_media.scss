@@ -57,6 +57,15 @@
             margin: 10px 5px 0 5px;
         }
     }
+    .portfolio-products {
+        flex-wrap: wrap;
+        justify-content: center;
+
+        &-column {
+            display: block;
+        }
+    }
+    
 }
 
 @media only screen and (max-width:320px) {

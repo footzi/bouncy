@@ -16,26 +16,21 @@ $(document).ready(function(){
 		$(select).fadeIn();
 	})
 
-	
-        var $container = $('.isotope');
-        $('#filters a').click(function(){
-			
-            var $this = $(this);
-            if ( !$this.hasClass('is-checked') ) {
-                $this.parents('#options').find('.is-checked').removeClass('is-checked');
-                $this.addClass('is-checked');
-                }
-            var selector = $this.attr('data-filter');
-            $container.isotope({  itemSelector: '.portfolio-products-item', filter: selector });
-            return false;
-        });
+	$(".portfolio-nav a").on("click", function() {
+		var link=$(this).attr("data-filter")
+		if (link==".all") {
+			$(".portfolio-products-item").fadeIn()
+			$(".portfolio-nav a").removeClass("is-checked")
+			$(this).addClass("is-checked")
+
+		} else {
+			$(".portfolio-products-item").hide()
+			$(".portfolio-nav a").removeClass("is-checked")
+			$(this).addClass("is-checked")
+			$(link).fadeIn()
+		}
+		
+	})
     
-// 		$('.grid').masonry({
-//   // options...
-// 		itemSelector: '.grid-item',
-// 		columnWidth: 100,
-// 		gutter:5,
-// 		isFitWidth:true
-// });
 });
 

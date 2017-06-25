@@ -66,11 +66,7 @@ a:hover {
 	background-position: center;
 }
 .is-checked:after {
-	content: "";
-	height: 2px;
-	display: block;
-	margin: 10px 10px 0 10px;
-	background-color: $accent;
+	opacity:1;
 }
 a {
 	cursor: pointer;
@@ -433,19 +429,41 @@ header {
 				&:last-child {
 					margin-right: 0;
 				}
+
+				
 			}
+			// .is-checked:after {
+// 	content: "";
+// 	height: 2px;
+// 	display: block;
+// 	margin: 10px 10px 0 10px;
+// 	background-color: $accent;
+// }	
+
 
 		a {
 			color:$grey;
 			text-decoration: none;
 			font-size: 16px;
-
+			
+			&:after {
+					content:" ";
+					height: 2px;
+					display: block;
+					margin: 10px 10px 0 10px;
+					background-color: $accent;
+					opacity: 0;
+				}
 		}
 	}
 	&-products {
 		margin-top: 30px;
-		// display: flex;
-		// flex-direction: row;
+		display: flex;
+
+		&-products-column {
+		display: flex;
+		flex-direction: column;
+		}
 		
 		&-item {
 			margin: 5px;
@@ -523,21 +541,6 @@ header {
 			}
 		}
 	}
-
-.isotope {
-	display: flex;
-	// flex-direction: row;
-	// flex-wrap: wrap;
-	div {
-		display: flex;
-		flex-direction: column;
-	}
-
-}
-
-// .per {
-// 	width: 25%;
-// }
 }
 @import "components/media";
 

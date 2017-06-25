@@ -3,60 +3,53 @@
     h3.porfolio-title.title-info.
         At vero eos et accusamus et iusto odio dignissimos ducimus qui
         blanditiis praesentium
-    .portfolio-content
-        .container
-            .row-fluid
-                nav.col-lg-8.col-lg-offset-2.col-md-8.col-md-offset-2
-                    #options
-                        #filters
-                            ul.portfolio-nav
-                                li
-                                    a.is-checked(data-filter="*") All Works
-                                li
-                                    a(data-filter=".print") Print
-                                li
-                                    a(data-filter=".identify") Identify
-                                li
-                                    a(data-filter=".branding") Branding
-                                li
-                                    a(data-filter=".web") Web
-                                li
-                                    a(data-filter=".html") HTML
-                                li
-                                    a(data-filter=".wordpress") Wordpress
-        .container
-            .row-fluid
-                .col-lg-10.col-lg-offset-1.col-md-10.col-md-offset-1.col-sm-12.col-xs-12.portfolio-products
-                    .row-fluid
-                        .isotope
-                            div
-                                .portfolio-products-item.print.grid-item.per
-                                    img.img-responsive(src="images/portfolio/1.jpg")
-                                .portfolio-products-item.identify.grid-item.per
-                                    img.img-responsive(src="images/portfolio/2.jpg")
-                                .portfolio-products-item.branding.grid-item.per
-                                    img.img-responsive(src="images/portfolio/3.jpg")  
-                            div
-                                .portfolio-products-item.web.grid-item.per
-                                    img.img-responsive(src="images/portfolio/4.jpg")
-                                .portfolio-products-item.html.grid-item.per
-                                    img.img-responsive(src="images/portfolio/5.jpg")
-                                .portfolio-products-item.wordpress.grid-item.per
-                                     img.img-responsive(src="images/portfolio/6.jpg")
-                            div   
-                                .portfolio-products-item.wordpress.grid-item.per
-                                    img.img-responsive(src="images/portfolio/7.jpg")
-                                .portfolio-products-item.html.grid-item.per
-                                    img.img-responsive(src="images/portfolio/8.jpg")
-                                .portfolio-products-item.print.grid-item.per
-                                    img.img-responsive(src="images/portfolio/9.jpg")
-                            div
-                                .portfolio-products-item.html.grid-item.per
-                                    img.img-responsive(src="images/portfolio/10.jpg")
-                                .portfolio-products-item.identify.grid-item.per
-                                    img.img-responsive(src="images/portfolio/11.jpg")
-                                .portfolio-products-item.print.grid-item.per
-                                    img.img-responsive(src="images/portfolio/12.jpg")
+    .container
+        .portfolio-content
+            nav
+                ul.portfolio-nav
+                    li
+                        a.is-checked(data-filter=".all") All Works
+                    li
+                        a(data-filter=".print") Print
+                    li
+                        a(data-filter=".identify") Identify
+                    li
+                        a(data-filter=".branding") Branding
+                    li
+                        a(data-filter=".web") Web
+                    li
+                        a(data-filter=".html") HTML
+                    li
+                        a(data-filter=".wordpress") Wordpress
+        .portfolio-products
+            .portfolio-products-column
+                .portfolio-products-item.print
+                    img.img-responsive(src="images/portfolio/1.jpg")
+                .portfolio-products-item.identify
+                    img.img-responsive(src="images/portfolio/5.jpg")
+                .portfolio-products-item.branding
+                    img.img-responsive(src="images/portfolio/9.jpg")  
+            .portfolio-products-column
+                .portfolio-products-item.web
+                    img.img-responsive(src="images/portfolio/2.jpg")
+                .portfolio-products-item.html
+                    img.img-responsive(src="images/portfolio/6.jpg")
+                .portfolio-products-item.wordpress
+                     img.img-responsive(src="images/portfolio/10.jpg")
+            .portfolio-products-column 
+                .portfolio-products-item.wordpress
+                    img.img-responsive(src="images/portfolio/3.jpg")
+                .portfolio-products-item.html
+                    img.img-responsive(src="images/portfolio/7.jpg")
+                .portfolio-products-item.print
+                    img.img-responsive(src="images/portfolio/11.jpg")
+            .portfolio-products-column
+                .portfolio-products-item.html
+                    img.img-responsive(src="images/portfolio/4.jpg")
+                .portfolio-products-item.identify
+                    img.img-responsive(src="images/portfolio/8.jpg")
+                .portfolio-products-item.print
+                    img.img-responsive(src="images/portfolio/12.jpg")
 
 
 
