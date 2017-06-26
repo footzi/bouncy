@@ -1,3 +1,11 @@
+@media only screen and (max-width:1199px) {
+    .portfolio-products-item-info {
+        &-icons {
+            margin-top: 20px;
+        }
+    }
+}
+
 @media only screen and (max-width:992px) {
     .about-image img {
         margin-top:10px; 
@@ -38,24 +46,20 @@
         }
     }
 
+    .portfolio-products-item-info {
+        padding: 0 10px;
+        &-icons {
+            margin-top: 20px;
+        }
+    }
+
 }
 
 @media only screen and (max-width:768px) {
     .services-content-icon {
         .icon {
             margin:0 10px;
-        }
-    
-    
-        
-    }
-}
-
-@media only screen and (max-width:480px) {
-    .services-content-charts {
-        .chart {
-            margin: 10px 5px 0 5px;
-        }
+        }    
     }
     .portfolio-products {
         flex-wrap: wrap;
@@ -65,6 +69,21 @@
             display: block;
         }
     }
+    .portfolio-products-item-info {
+        padding: 0 40px;
+        &-icons {
+            margin-top: 40px;
+        }
+    }
+}
+
+@media only screen and (max-width:480px) {
+    .services-content-charts {
+        .chart {
+            margin: 10px 5px 0 5px;
+        }
+    }
+    
     
 }
 

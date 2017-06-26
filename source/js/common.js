@@ -16,21 +16,30 @@ $(document).ready(function(){
 		$(select).fadeIn();
 	})
 
+
 	$(".portfolio-nav a").on("click", function() {
 		var link=$(this).attr("data-filter")
 		if (link==".all") {
 			$(".portfolio-products-item").fadeIn()
-			$(".portfolio-nav a").removeClass("is-checked")
+			$(".portfolio-link").removeClass("is-checked")
+			$(".portfolio-products-column").removeClass("flex-row")
 			$(this).addClass("is-checked")
 
 		} else {
 			$(".portfolio-products-item").hide()
-			$(".portfolio-nav a").removeClass("is-checked")
+			$(".portfolio-link").removeClass("is-checked")
+			$(".portfolio-products-column").addClass("flex-row")
 			$(this).addClass("is-checked")
 			$(link).fadeIn()
 		}
-		
 	})
-    
+
+
+	$(".portfolio-products-item").hover(
+		function () {
+			var heightImg = $(this).children(".img-responsive").height()
+			$(".portfolio-products-item-info").height(heightImg)
+		}
+	)
 });
 

@@ -48,7 +48,7 @@ body {
 	cursor: pointer;
 }
 a:hover {
-	color:$white;
+	text-decoration: none;
 }
 .icon-active {
 	background-color:$text;
@@ -66,7 +66,12 @@ a:hover {
 	background-position: center;
 }
 .is-checked:after {
-	opacity:1;
+	opacity:1 !important;
+	margin:10px 10px 0 10px !important; 
+}
+.flex-row {
+	flex-direction: row;
+	display: flex;
 }
 a {
 	cursor: pointer;
@@ -381,12 +386,12 @@ header {
 
 	&-text {
 		margin-top: $contentmargin;
-		color: #b2b3b3;
+		color: $grey2;
 		line-height: 1.75;
 	}
 	&-sign {
 		margin-top: 30px;
-		color: #b2b3b3;
+		color: $grey2;
 		font-size: 14px;
 
 		&-name {
@@ -429,33 +434,25 @@ header {
 				&:last-child {
 					margin-right: 0;
 				}
-
-				
 			}
-			// .is-checked:after {
-// 	content: "";
-// 	height: 2px;
-// 	display: block;
-// 	margin: 10px 10px 0 10px;
-// 	background-color: $accent;
-// }	
+	}
 
-
-		a {
-			color:$grey;
-			text-decoration: none;
-			font-size: 16px;
-			
-			&:after {
-					content:" ";
-					height: 2px;
-					display: block;
-					margin: 10px 10px 0 10px;
-					background-color: $accent;
-					opacity: 0;
-				}
+	&-link {
+		color:$grey;
+		text-decoration: none;
+		font-size: 16px;
+	
+		&:after {
+				content:" ";
+				height: 2px;
+				display: block;
+				margin: 10px 0px 0 0px;
+				background-color: $accent;
+				opacity: 0;
+				transition: all 0.5s;
 		}
 	}
+
 	&-products {
 		margin-top: 30px;
 		display: flex;
@@ -468,7 +465,6 @@ header {
 		&-item {
 			margin: 5px;
 			position: relative;
-			// width: 20%;
 
 			img {
 				margin: 0 auto;
@@ -480,35 +476,45 @@ header {
 				top: 0;
 				left: 0;
 				width: 100%;
-				height: 100%;
-				padding:0 20px;
+				padding:0 40px;
 				background-color:rgba($black, .8);
 				color:$white;
 				display:flex;
 				text-align: left;
 				flex-direction: column;
 				justify-content: center;
-				transition: opacity 0.8s;
+				transition: all 0.3s;
 
 				h4 {
+					font: {
+						family: SourceSansProLight;
+						size: 20px;
+					}
+					letter-spacing: 5px;
 					color:$accent;
+					white-space: nowrap;
 
-					div {
-						margin-left: 50px;
+					&:after {
+						content: "";
+						display: block;
 						margin-top: 10px;
 						height: 1px;
 						width: 20px;
+						margin-left: 50px;
 						background-color: $accent;
-						transition: margin-left ease-out 0.5s;
+						transition: all ease-out 0.5s;
 					}
 				}
 			
 				p {
+					font-size: 12px;
 					margin-top: 20px;
+					color:$grey2;
+					line-height: 1.7;
 				}
 
 				&-icons {
-					margin-top: 30px;
+					margin-top: 60px;
 					display: flex;
 					position: relative;
 					top: 30px;
@@ -516,8 +522,8 @@ header {
 
 					.item-icon {
 						background-color: $black;
-						width: 25px;
-						height: 25px;
+						width: 30px;
+						height: 30px;
 						
 						&:last-child {
 							margin-left: 5px;
@@ -536,16 +542,13 @@ header {
 			&:hover .portfolio-products-item-info-icons {
 				top: 0;
 			}
-			&:hover .portfolio-products-item-info h4 div {
+			&:hover .portfolio-products-item-info h4:after {
 				margin-left: 0;
 			}
 		}
 	}
 }
 @import "components/media";
-
-
-
 
 
 
