@@ -29,9 +29,9 @@ body {
 }
 .buttons {
 	font-size:14px;
-	border:1px solid $title;
+	border:1px solid $white;
 	border-radius:15px;
-	color:$title;
+	color:$white;
 	background-color:transparent;
 	padding: 5px 30px 5px 30px;
 }
@@ -168,10 +168,16 @@ header {
 
 	&-text {
 		margin-bottom: 100px;
+
 		&-content {
 			font-size:14px;
 			color:$text;
 			margin:50px 0 50px 0;
+		}
+
+		&-button {
+			border:1px solid $title;
+			color:$title;
 		}
 	}
 
@@ -456,15 +462,23 @@ header {
 	&-products {
 		margin-top: 30px;
 		display: flex;
+		
 
-		&-products-column {
+		&-column {
 		display: flex;
 		flex-direction: column;
+		justify-content: space-between;
+		margin-right: 10px;
+
+			&:last-child {
+				margin-right: 0;
+			}
 		}
 		
 		&-item {
-			margin: 5px;
+			margin: 5px 0;
 			position: relative;
+			display: flex;
 
 			img {
 				margin: 0 auto;
@@ -476,6 +490,7 @@ header {
 				top: 0;
 				left: 0;
 				width: 100%;
+				height: 100%;
 				padding:0 40px;
 				background-color:rgba($black, .8);
 				color:$white;
@@ -483,7 +498,7 @@ header {
 				text-align: left;
 				flex-direction: column;
 				justify-content: center;
-				transition: all 0.3s;
+				transition: opacity 0.2s ease;
 
 				h4 {
 					font: {
@@ -546,6 +561,57 @@ header {
 				margin-left: 0;
 			}
 		}
+	}
+
+	&-text {
+		position:relative;
+		top:-5px;
+		text-align: center;
+		padding:40px 0;
+		background-color:$accent;
+
+		&-content {
+
+			p {
+				font-size: 20px;
+				color:$white;
+			}
+
+			&-button {
+				margin-top: 20px;
+			}
+		}
+	}
+}
+
+//team
+
+.team {
+	text-align:center;
+
+	.progress {
+		width: 100px;
+		
+
+		.bar {
+			height: 5px;
+			background-color: red;
+			animation-duration: 3s;
+			animation-name: bar;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+		}
+
+	}
+}
+
+@keyframes bar {
+	from {
+		width: 0%;
+	}
+
+	to {
+		width:100%;
 	}
 }
 @import "components/media";

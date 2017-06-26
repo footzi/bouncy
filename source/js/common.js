@@ -19,6 +19,10 @@ $(document).ready(function(){
 
 	$(".portfolio-nav a").on("click", function() {
 		var link=$(this).attr("data-filter")
+
+		function height() {
+			
+		}
 		if (link==".all") {
 			$(".portfolio-products-item").fadeIn()
 			$(".portfolio-link").removeClass("is-checked")
@@ -30,16 +34,13 @@ $(document).ready(function(){
 			$(".portfolio-link").removeClass("is-checked")
 			$(".portfolio-products-column").addClass("flex-row")
 			$(this).addClass("is-checked")
-			$(link).fadeIn()
+			$(link).fadeIn()	
+			
 		}
 	})
 
+	var test = $(".bar").width()
+	console.log(test)
 
-	$(".portfolio-products-item").hover(
-		function () {
-			var heightImg = $(this).children(".img-responsive").height()
-			$(".portfolio-products-item-info").height(heightImg)
-		}
-	)
 });
 

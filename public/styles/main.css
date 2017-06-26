@@ -6128,9 +6128,9 @@ body {
 
 .buttons {
   font-size: 14px;
-  border: 1px solid #333b46;
+  border: 1px solid #fffFff;
   border-radius: 15px;
-  color: #333b46;
+  color: #fffFff;
   background-color: transparent;
   padding: 5px 30px 5px 30px; }
 
@@ -6242,6 +6242,9 @@ header {
       font-size: 14px;
       color: #81868e;
       margin: 50px 0 50px 0; }
+    .about-text-button {
+      border: 1px solid #333b46;
+      color: #333b46; }
   .about-image img {
     margin: 0 auto; }
   .about .wrapper-about-details {
@@ -6416,12 +6419,17 @@ header {
   .portfolio-products {
     margin-top: 30px;
     display: flex; }
-    .portfolio-products-products-column {
+    .portfolio-products-column {
       display: flex;
-      flex-direction: column; }
+      flex-direction: column;
+      justify-content: space-between;
+      margin-right: 10px; }
+      .portfolio-products-column:last-child {
+        margin-right: 0; }
     .portfolio-products-item {
-      margin: 5px;
-      position: relative; }
+      margin: 5px 0;
+      position: relative;
+      display: flex; }
       .portfolio-products-item img {
         margin: 0 auto; }
       .portfolio-products-item-info {
@@ -6430,6 +6438,7 @@ header {
         top: 0;
         left: 0;
         width: 100%;
+        height: 100%;
         padding: 0 40px;
         background-color: rgba(0, 0, 0, 0.8);
         color: #fffFff;
@@ -6437,7 +6446,7 @@ header {
         text-align: left;
         flex-direction: column;
         justify-content: center;
-        transition: all 0.3s; }
+        transition: opacity 0.2s ease; }
         .portfolio-products-item-info h4 {
           font-family: SourceSansProLight;
           font-size: 20px;
@@ -6478,6 +6487,35 @@ header {
         top: 0; }
       .portfolio-products-item:hover .portfolio-products-item-info h4:after {
         margin-left: 0; }
+  .portfolio-text {
+    position: relative;
+    top: -5px;
+    text-align: center;
+    padding: 40px 0;
+    background-color: #19bd9a; }
+    .portfolio-text-content p {
+      font-size: 20px;
+      color: #fffFff; }
+    .portfolio-text-content-button {
+      margin-top: 20px; }
+
+.team {
+  text-align: center; }
+  .team .progress {
+    width: 100px; }
+    .team .progress .bar {
+      height: 5px;
+      background-color: red;
+      animation-duration: 3s;
+      animation-name: bar;
+      animation-iteration-count: infinite;
+      animation-direction: alternate; }
+
+@keyframes bar {
+  from {
+    width: 0%; }
+  to {
+    width: 100%; } }
 
 @media only screen and (max-width: 1199px) {
   .portfolio-products-item-info-icons {
