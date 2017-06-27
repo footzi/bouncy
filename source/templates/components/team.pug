@@ -3,7 +3,11 @@
 	h3.team-title.title-info.
 		At vero eos et accusamus et iusto odio dignissimosducimus qui
 		blanditiis praesentiu
-
-	.progress
-		.bar
-	.per
+	#carousel-team.carousel.slide(data-ride="slide")
+		ol.carousel-indicators
+			li.active(data-target="#carousel-team" data-slite-to="0")
+			li(data-target="#carousel-team" data-slite-to="1")
+			li(data-target="#carousel-team" data-slite-to="2")
+		.carousel-inner(role="list-box")
+			.item.active
+				

@@ -76,6 +76,9 @@ a:hover {
 a {
 	cursor: pointer;
 }
+.info-mini {
+	top: -20px !important;
+}
 //header
 header {						
 	background-image: url("../images/header-bg.jpg");
@@ -309,6 +312,8 @@ header {
 		&-icon {
 			display: flex;
 			flex-direction: column;
+			position: relative;
+       		z-index:9999;
 
 			li {
 				margin-bottom: 15px;
@@ -463,20 +468,8 @@ header {
 		margin-top: 30px;
 		display: flex;
 		
-
-		&-column {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		margin-right: 10px;
-
-			&:last-child {
-				margin-right: 0;
-			}
-		}
-		
 		&-item {
-			margin: 5px 0;
+			margin: 10px 2% 0 2%;
 			position: relative;
 			display: flex;
 
@@ -564,10 +557,9 @@ header {
 	}
 
 	&-text {
-		position:relative;
-		top:-5px;
+		margin-top: 40px;
 		text-align: center;
-		padding:40px 0;
+		padding:60px 0;
 		background-color:$accent;
 
 		&-content {
@@ -578,7 +570,7 @@ header {
 			}
 
 			&-button {
-				margin-top: 20px;
+				margin-top: 30px;
 			}
 		}
 	}
@@ -605,15 +597,15 @@ header {
 	}
 }
 
-@keyframes bar {
-	from {
-		width: 0%;
-	}
+// @keyframes bar {
+// 	from {
+// 		width: 0%;
+// 	}
 
-	to {
-		width:100%;
-	}
-}
+// 	to {
+// 		width:100%;
+// 	}
+// }
 @import "components/media";
 
 

@@ -6175,6 +6175,9 @@ a:hover {
 a {
   cursor: pointer; }
 
+.info-mini {
+  top: -20px !important; }
+
 header {
   background-image: url("../images/header-bg.jpg"); }
   header-wrapper {
@@ -6324,7 +6327,9 @@ header {
     margin-top: 50px; }
     .services-content-icon {
       display: flex;
-      flex-direction: column; }
+      flex-direction: column;
+      position: relative;
+      z-index: 9999; }
       .services-content-icon li {
         margin-bottom: 15px; }
         .services-content-icon li:last-child {
@@ -6419,15 +6424,8 @@ header {
   .portfolio-products {
     margin-top: 30px;
     display: flex; }
-    .portfolio-products-column {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      margin-right: 10px; }
-      .portfolio-products-column:last-child {
-        margin-right: 0; }
     .portfolio-products-item {
-      margin: 5px 0;
+      margin: 10px 2% 0 2%;
       position: relative;
       display: flex; }
       .portfolio-products-item img {
@@ -6488,16 +6486,15 @@ header {
       .portfolio-products-item:hover .portfolio-products-item-info h4:after {
         margin-left: 0; }
   .portfolio-text {
-    position: relative;
-    top: -5px;
+    margin-top: 40px;
     text-align: center;
-    padding: 40px 0;
+    padding: 60px 0;
     background-color: #19bd9a; }
     .portfolio-text-content p {
       font-size: 20px;
       color: #fffFff; }
     .portfolio-text-content-button {
-      margin-top: 20px; }
+      margin-top: 30px; }
 
 .team {
   text-align: center; }
@@ -6510,12 +6507,6 @@ header {
       animation-name: bar;
       animation-iteration-count: infinite;
       animation-direction: alternate; }
-
-@keyframes bar {
-  from {
-    width: 0%; }
-  to {
-    width: 100%; } }
 
 @media only screen and (max-width: 1199px) {
   .portfolio-products-item-info-icons {
@@ -6545,6 +6536,13 @@ header {
     position: relative;
     top: 40px;
     margin: 0 auto; }
+  .portfolio-products {
+    flex-wrap: wrap;
+    justify-content: center; }
+    .portfolio-products-column {
+      display: block; }
+  .portfolio-products-item {
+    margin: 10px 10% 0 10%; }
   .portfolio-products-item-info {
     padding: 0 10px; }
     .portfolio-products-item-info-icons {
@@ -6553,17 +6551,14 @@ header {
 @media only screen and (max-width: 768px) {
   .services-content-icon .icon {
     margin: 0 10px; }
-  .portfolio-products {
-    flex-wrap: wrap;
-    justify-content: center; }
-    .portfolio-products-column {
-      display: block; }
   .portfolio-products-item-info {
     padding: 0 40px; }
     .portfolio-products-item-info-icons {
       margin-top: 40px; } }
 
 @media only screen and (max-width: 480px) {
+  .navbar {
+    padding: 0 20px; }
   .services-content-charts .chart {
     margin: 10px 5px 0 5px; } }
 

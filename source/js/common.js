@@ -27,20 +27,26 @@ $(document).ready(function(){
 			$(".portfolio-products-item").fadeIn()
 			$(".portfolio-link").removeClass("is-checked")
 			$(".portfolio-products-column").removeClass("flex-row")
+		
 			$(this).addClass("is-checked")
 
 		} else {
 			$(".portfolio-products-item").hide()
 			$(".portfolio-link").removeClass("is-checked")
 			$(".portfolio-products-column").addClass("flex-row")
+			
 			$(this).addClass("is-checked")
 			$(link).fadeIn()	
+
 			
 		}
 	})
 
-	var test = $(".bar").width()
-	console.log(test)
+	setInterval(function() {
+		var widthPr = $(".progress").width();
+		var widthBar = $(".bar").width()/widthPr*100;
+		$(".percent").empty().append(Math.round(widthBar)+" %")
+	},10)
 
 });
 

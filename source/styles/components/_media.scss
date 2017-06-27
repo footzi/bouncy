@@ -46,12 +46,25 @@
         }
     }
 
+    .portfolio-products {
+        flex-wrap: wrap;
+        justify-content: center;
+
+        &-column {
+            display: block;
+        }
+    }
+    .portfolio-products-item {
+        margin: 10px 10% 0 10%;
+    }
     .portfolio-products-item-info {
         padding: 0 10px;
         &-icons {
             margin-top: 20px;
         }
     }
+
+    
 
 }
 
@@ -61,14 +74,7 @@
             margin:0 10px;
         }    
     }
-    .portfolio-products {
-        flex-wrap: wrap;
-        justify-content: center;
-
-        &-column {
-            display: block;
-        }
-    }
+    
     .portfolio-products-item-info {
         padding: 0 40px;
         &-icons {
@@ -78,6 +84,9 @@
 }
 
 @media only screen and (max-width:480px) {
+    .navbar {
+        padding: 0 20px;
+    }
     .services-content-charts {
         .chart {
             margin: 10px 5px 0 5px;
