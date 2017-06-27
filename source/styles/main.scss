@@ -3,7 +3,7 @@
 @import "../libs/pe-icon-7-stroke/pe-icon-7-stroke";
 @import "components/reset";
 @import "components/var";
-
+@import "components/keyframes";
 body {
 	line-height: 1.75;
 	font-family: OpenSans-regular;
@@ -78,6 +78,11 @@ a {
 }
 .info-mini {
 	top: -20px !important;
+}
+.animation {
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
 }
 //header
 header {						
@@ -559,15 +564,15 @@ header {
 	&-text {
 		margin-top: 40px;
 		text-align: center;
-		padding:60px 0;
-		background-color:$accent;
-
+		background-image: url("../images/portfolio.png");
 		&-content {
+			background-color: rgba($accent, .7);
+			padding:60px 0;
 
-			p {
-				font-size: 20px;
-				color:$white;
-			}
+		p {
+			font-size: 20px;
+			color:$white;
+		}
 
 			&-button {
 				margin-top: 30px;
@@ -581,32 +586,92 @@ header {
 .team {
 	text-align:center;
 
-	.progress {
-		width: 100px;
+	#carousel-team {
+		margin-top: $contentmargin;
+	}
+
+	&-photo {
+
+	}
+
+	&-about {
+		text-align: right;
 		
 
-		.bar {
-			height: 5px;
-			background-color: red;
-			animation-duration: 3s;
-			animation-name: bar;
-			animation-iteration-count: infinite;
-			animation-direction: alternate;
+		&-title {
+			padding-right:20px;
+			border-right:4px solid $accent;
+			&-name {
+				
+			}
+
+			&-post {
+				margin-top: 10px;									
+			}	
 		}
 
+		&-text {
+			padding-right:20px;
+			margin: 20px 0;
+		}
+
+		&-progress {
+
+			&-item {
+				margin-bottom: 30px;
+				.progress-title {
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+
+					.progress-name {
+
+					}
+					.progress-percent {
+
+					}	
+				}
+				.progress-bar {
+					width: 100%;
+					height: 5px;
+					background-color: silver;
+					margin-top: 10px;
+
+					.bar {
+						height: 100%;
+						background-color: $accent;
+						@extend .animation;
+					}
+					.bar-1 {
+						animation-name: bar-1;
+					}
+					.bar-2 {
+						animation-name: bar-2;
+					}
+					.bar-3 {
+						animation-name: bar-3;
+					}
+				}
+			}
+		}
 	}
 }
 
-// @keyframes bar {
-// 	from {
-// 		width: 0%;
-// 	}
+@import "components/media"
 
-// 	to {
-// 		width:100%;
-// 	}
-// }
-@import "components/media";
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

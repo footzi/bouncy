@@ -6107,6 +6107,24 @@ ul {
 img {
   border: 0; }
 
+@keyframes bar-1 {
+  from {
+    width: 0%; }
+  to {
+    width: 100%; } }
+
+@keyframes bar-2 {
+  from {
+    width: 0%; }
+  to {
+    width: 70%; } }
+
+@keyframes bar-3 {
+  from {
+    width: 0%; }
+  to {
+    width: 50%; } }
+
 body {
   line-height: 1.75;
   font-family: OpenSans-regular; }
@@ -6177,6 +6195,11 @@ a {
 
 .info-mini {
   top: -20px !important; }
+
+.animation, .team-about-progress-item .progress-bar .bar {
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate; }
 
 header {
   background-image: url("../images/header-bg.jpg"); }
@@ -6488,25 +6511,50 @@ header {
   .portfolio-text {
     margin-top: 40px;
     text-align: center;
-    padding: 60px 0;
-    background-color: #19bd9a; }
-    .portfolio-text-content p {
-      font-size: 20px;
-      color: #fffFff; }
-    .portfolio-text-content-button {
-      margin-top: 30px; }
+    background-image: url("../images/portfolio.png"); }
+    .portfolio-text-content {
+      background-color: rgba(25, 189, 154, 0.7);
+      padding: 60px 0; }
+      .portfolio-text-content p {
+        font-size: 20px;
+        color: #fffFff; }
+      .portfolio-text-content-button {
+        margin-top: 30px; }
 
 .team {
   text-align: center; }
-  .team .progress {
-    width: 100px; }
-    .team .progress .bar {
-      height: 5px;
-      background-color: red;
-      animation-duration: 3s;
-      animation-name: bar;
-      animation-iteration-count: infinite;
-      animation-direction: alternate; }
+  .team #carousel-team {
+    margin-top: 50px; }
+  .team-about {
+    text-align: right; }
+    .team-about-title {
+      padding-right: 20px;
+      border-right: 4px solid #19bd9a; }
+      .team-about-title-post {
+        margin-top: 10px; }
+    .team-about-text {
+      padding-right: 20px;
+      margin: 20px 0; }
+    .team-about-progress-item {
+      margin-bottom: 30px; }
+      .team-about-progress-item .progress-title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; }
+      .team-about-progress-item .progress-bar {
+        width: 100%;
+        height: 5px;
+        background-color: silver;
+        margin-top: 10px; }
+        .team-about-progress-item .progress-bar .bar {
+          height: 100%;
+          background-color: #19bd9a; }
+        .team-about-progress-item .progress-bar .bar-1 {
+          animation-name: bar-1; }
+        .team-about-progress-item .progress-bar .bar-2 {
+          animation-name: bar-2; }
+        .team-about-progress-item .progress-bar .bar-3 {
+          animation-name: bar-3; }
 
 @media only screen and (max-width: 1199px) {
   .portfolio-products-item-info-icons {

@@ -20,9 +20,6 @@ $(document).ready(function(){
 	$(".portfolio-nav a").on("click", function() {
 		var link=$(this).attr("data-filter")
 
-		function height() {
-			
-		}
 		if (link==".all") {
 			$(".portfolio-products-item").fadeIn()
 			$(".portfolio-link").removeClass("is-checked")
@@ -43,9 +40,16 @@ $(document).ready(function(){
 	})
 
 	setInterval(function() {
-		var widthPr = $(".progress").width();
-		var widthBar = $(".bar").width()/widthPr*100;
-		$(".percent").empty().append(Math.round(widthBar)+" %")
+		var widthPr = $(".progress-bar").width();
+		
+		var widthBar1 = Math.round($(".bar-1").width()/widthPr*100)+"%";
+		$(".progress-percent-1").empty().append(widthBar1);
+
+		var widthBar2 = Math.round($(".bar-2").width()/widthPr*100)+"%";
+		$(".progress-percent-2").empty().append(widthBar2);
+
+		var widthBar3 = Math.round($(".bar-3").width()/widthPr*100)+"%";
+		$(".progress-percent-3").empty().append(widthBar3);
 	},10)
 
 });
