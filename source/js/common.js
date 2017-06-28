@@ -39,10 +39,12 @@ $(document).ready(function(){
 		}
 	})
 
-	setInterval(function() {
-		var widthPr = $(".progress-bar").width();
+	
+	setInterval (function() {
+		var widthPr = $(".progress").width();
 		
 		var widthBar1 = Math.round($(".bar-1").width()/widthPr*100)+"%";
+
 		$(".progress-percent-1").empty().append(widthBar1);
 
 		var widthBar2 = Math.round($(".bar-2").width()/widthPr*100)+"%";
@@ -50,7 +52,7 @@ $(document).ready(function(){
 
 		var widthBar3 = Math.round($(".bar-3").width()/widthPr*100)+"%";
 		$(".progress-percent-3").empty().append(widthBar3);
-	},10)
-
+	},10);
+	
 });
 
