@@ -135,6 +135,7 @@ a {
 		height: 10px;
 	}
 }
+
 //header
 header {						
 	background-image: url("../images/header-bg.jpg");
@@ -324,7 +325,7 @@ header {
 	}
 	&-text {
 		background-image: url("../images/7.jpg");
-		height: 130px;
+		height: 130px;/////!!!!!!!
 		@extend .background;
 
 		&-content {
@@ -614,16 +615,10 @@ header {
 		margin-top: $contentmargin;
 	}
 	&-photo {
-		// img {
-		// 	margin: 0 auto;
-		// }
-		height: 400px;
-		@extend .background;
+		img {
+			position: fixed;
+		}
 	}
-	.photo-1 {
-		background-image: url("../images/team/1.jpg")
-	}
-
 	&-about {
 		text-align: right;
 		color: $text;
@@ -693,7 +688,7 @@ header {
 		margin-top: 40px;
 		text-align: center;
 		background-image:url("../images/portfolio.jpg");
-		@-extend .background;
+		@extend .background;
 
 		&-content {
 			padding: 40px 0;

@@ -6112,7 +6112,7 @@ body {
   font-family: OpenSans-regular; }
 
 .wrapper {
-  padding: 8% 0 8% 0; }
+  padding: 5% 0 5% 0; }
 
 section {
   position: relative; }
@@ -6129,7 +6129,7 @@ section {
   z-index: -1; }
 
 .about, .services, .featured, .portfolio, .team, .testimonials {
-  padding: 8% 0 8% 0;
+  padding: 5% 0 5% 0;
   text-align: center; }
 
 .title {
@@ -6142,7 +6142,7 @@ section {
   font-family: SourceSansProLight;
   font-size: 16px;
   color: #81868e;
-  margin-top: 5%;
+  margin-top: 3%;
   line-height: 1.5; }
 
 .buttons {
@@ -6179,7 +6179,7 @@ a:hover {
 .color-text {
   color: #19bd9a; }
 
-.background, header, .featured-carousel-slide-img-1, .featured-carousel-slide-img-2, .featured-carousel-slide-img-3, .featured-carousel-slide-img-4, .featured-carousel-slide-img-5, .featured-carousel-slide-img-6, .featured-text, .slogan, .portfolio-text, .team-photo {
+.background, header, .featured-carousel-slide-img-1, .featured-carousel-slide-img-2, .featured-carousel-slide-img-3, .featured-carousel-slide-img-4, .featured-carousel-slide-img-5, .featured-carousel-slide-img-6, .featured-text, .slogan, .portfolio-text, .team-banner {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; }
@@ -6301,7 +6301,7 @@ header {
   .about .wrapper-about-details {
     background-color: #f3f3f3; }
   .about-details {
-    padding: 8% 0 8% 0;
+    padding: 5% 0 5% 0;
     text-align: center; }
     .about-details-icons {
       margin-top: 80px; }
@@ -6324,7 +6324,7 @@ header {
 .featured {
   padding-bottom: 0; }
   .featured-carousel {
-    margin-top: 5%; }
+    margin-top: 3%; }
     .featured-carousel-slide {
       height: 320px; }
       .featured-carousel-slide-img-1, .featured-carousel-slide-img-2, .featured-carousel-slide-img-3, .featured-carousel-slide-img-4, .featured-carousel-slide-img-5, .featured-carousel-slide-img-6 {
@@ -6370,7 +6370,7 @@ header {
         color: #fffFff; }
 
 .services-content {
-  margin-top: 5%; }
+  margin-top: 3%; }
   .services-content-icon {
     display: flex;
     flex-direction: column;
@@ -6425,7 +6425,7 @@ header {
     color: #f3f3f3;
     letter-spacing: 5px; }
   .slogan-text {
-    margin-top: 5%;
+    margin-top: 3%;
     color: #b2b3b3;
     line-height: 1.75; }
   .slogan-sign {
@@ -6440,7 +6440,7 @@ header {
     top: -150px; }
 
 .portfolio-content {
-  margin-top: 5%; }
+  margin-top: 3%; }
 
 .portfolio-nav {
   display: flex;
@@ -6546,13 +6546,10 @@ header {
       margin-top: 30px; }
 
 .team #carousel-team {
-  margin-top: 5%; }
+  margin-top: 3%; }
 
-.team-photo {
-  height: 400px; }
-
-.team .photo-1 {
-  background-image: url("../images/team/1.jpg"); }
+.team-photo img {
+  position: fixed; }
 
 .team-about {
   text-align: right;
@@ -6601,8 +6598,7 @@ header {
 .team-banner {
   margin-top: 40px;
   text-align: center;
-  background-image: url("../images/portfolio.jpg");
-  @-extend .background; }
+  background-image: url("../images/portfolio.jpg"); }
   .team-banner-content {
     padding: 40px 0;
     background-color: rgba(0, 0, 0, 0.7); }
@@ -6614,7 +6610,7 @@ header {
       margin-top: 30px; }
 
 .testimonials-carousel {
-  margin-top: 5%;
+  margin-top: 3%;
   padding: 40px 0;
   background-color: #fffFff; }
   .testimonials-carousel-photo {
@@ -6672,6 +6668,9 @@ header {
   .team-about {
     margin-top: 20px;
     padding: 0 10px; }
+  .team-photo img {
+    position: relative;
+    margin: 0 auto; }
   .team .carousel-indicators {
     margin-top: 20px; } }
 
