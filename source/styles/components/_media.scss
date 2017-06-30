@@ -67,8 +67,15 @@
         position: relative;
         margin: 0 auto;
     }
-    .team .carousel-indicators {
+    .carousel-indicators {
         margin-top: 20px;
+    }
+    .testimonials-carousel-photo img {
+        margin: 0 auto;
+    }
+    .testimonials-carousel-content {
+        margin-top: 10px; 
+        text-align: center;
     }
 }
 
@@ -95,6 +102,7 @@
             margin: 10px 5px 0 5px;
         }
     }
+    
 }
 
 @media only screen and (max-width:320px) {

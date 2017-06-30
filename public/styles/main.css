@@ -6112,7 +6112,7 @@ body {
   font-family: OpenSans-regular; }
 
 .wrapper {
-  padding: 5% 0 5% 0; }
+  padding: 60px 0 60px 0; }
 
 section {
   position: relative; }
@@ -6129,7 +6129,7 @@ section {
   z-index: -1; }
 
 .about, .services, .featured, .portfolio, .team, .testimonials, .news {
-  padding: 5% 0 5% 0;
+  padding: 60px 0 60px 0;
   text-align: center; }
 
 .title {
@@ -6142,7 +6142,7 @@ section {
   font-family: SourceSansProLight;
   font-size: 16px;
   color: #81868e;
-  margin-top: 3%;
+  margin-top: 40px;
   line-height: 1.5; }
 
 .buttons {
@@ -6179,7 +6179,7 @@ a:hover {
 .color-text {
   color: #19bd9a; }
 
-.background, header, .featured-carousel-slide-img-1, .featured-carousel-slide-img-2, .featured-carousel-slide-img-3, .featured-carousel-slide-img-4, .featured-carousel-slide-img-5, .featured-carousel-slide-img-6, .featured-text, .slogan, .portfolio-text, .team-banner {
+.background, header, .featured-carousel-slide-img-1, .featured-carousel-slide-img-2, .featured-carousel-slide-img-3, .featured-carousel-slide-img-4, .featured-carousel-slide-img-5, .featured-carousel-slide-img-6, .featured-text, .slogan, .portfolio-banner, .team-banner {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; }
@@ -6301,7 +6301,7 @@ header {
   .about .wrapper-about-details {
     background-color: #f3f3f3; }
   .about-details {
-    padding: 5% 0 5% 0;
+    padding: 60px 0 60px 0;
     text-align: center; }
     .about-details-icons {
       margin-top: 80px; }
@@ -6324,7 +6324,7 @@ header {
 .featured {
   padding-bottom: 0; }
   .featured-carousel {
-    margin-top: 3%; }
+    margin-top: 40px; }
     .featured-carousel-slide {
       height: 320px; }
       .featured-carousel-slide-img-1, .featured-carousel-slide-img-2, .featured-carousel-slide-img-3, .featured-carousel-slide-img-4, .featured-carousel-slide-img-5, .featured-carousel-slide-img-6 {
@@ -6370,7 +6370,7 @@ header {
         color: #fffFff; }
 
 .services-content {
-  margin-top: 3%; }
+  margin-top: 40px; }
   .services-content-icon {
     display: flex;
     flex-direction: column;
@@ -6425,7 +6425,7 @@ header {
     color: #f3f3f3;
     letter-spacing: 5px; }
   .slogan-text {
-    margin-top: 3%;
+    margin-top: 40px;
     color: #b2b3b3;
     line-height: 1.75; }
   .slogan-sign {
@@ -6440,7 +6440,7 @@ header {
     top: -150px; }
 
 .portfolio-content {
-  margin-top: 3%; }
+  margin-top: 40px; }
 
 .portfolio-nav {
   display: flex;
@@ -6531,22 +6531,22 @@ header {
     .portfolio-products-item:hover .portfolio-products-item-info h4:after {
       margin-left: 0; }
 
-.portfolio-text {
+.portfolio-banner {
   margin-top: 40px;
   text-align: center;
   background-image: url("../images/portfolio.jpg"); }
-  .portfolio-text-content {
+  .portfolio-banner-content {
     background-color: rgba(25, 189, 154, 0.7);
-    padding: 60px 0; }
-    .portfolio-text-content p {
+    padding: 40px 0; }
+    .portfolio-banner-content p {
       font-size: 20px;
       color: #fffFff;
       line-height: 1.2; }
-    .portfolio-text-content-button {
+    .portfolio-banner-content-button {
       margin-top: 30px; }
 
 .team #carousel-team {
-  margin-top: 3%; }
+  margin-top: 40px; }
 
 .team-photo img {
   position: fixed; }
@@ -6610,22 +6610,30 @@ header {
       margin-top: 30px; }
 
 .testimonials-carousel {
-  margin-top: 3%;
+  margin-top: 40px;
   padding: 40px 0;
   background-color: #fffFff; }
   .testimonials-carousel-photo {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%; }
+    margin: 0 auto; }
+    .testimonials-carousel-photo img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%; }
   .testimonials-carousel-content {
     text-align: left; }
     .testimonials-carousel-content-text {
-      line-height: 1.5; }
+      font-size: 16px;
+      color: #81868e;
+      line-height: 1.75; }
     .testimonials-carousel-content-name {
+      font-weight: bold;
+      font-size: 16px;
       color: #19bd9a;
-      margin-top: 20px; }
+      margin-top: 30px; }
     .testimonials-carousel-content-company {
-      margin-top: 10px; }
+      margin-top: 10px;
+      font-size: 14px;
+      color: #464646; }
 
 .news {
   background-color: #000000;
@@ -6683,8 +6691,13 @@ header {
   .team-photo img {
     position: relative;
     margin: 0 auto; }
-  .team .carousel-indicators {
-    margin-top: 20px; } }
+  .carousel-indicators {
+    margin-top: 20px; }
+  .testimonials-carousel-photo img {
+    margin: 0 auto; }
+  .testimonials-carousel-content {
+    margin-top: 10px;
+    text-align: center; } }
 
 @media only screen and (max-width: 768px) {
   .services-content-icon .icon {

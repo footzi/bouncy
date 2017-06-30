@@ -39,14 +39,14 @@ $(document).ready(function(){
 		}
 	})
 
-	setInterval(function() {
-		$(".bar").each(function () {
-			var widthP = $(this).parent().width();
-			var width = Math.round($(this).width()/widthP*100)+"%";
-			var percent = $(this).parent().siblings(".progress-title").children(".progress-percent");
-			percent.empty().append(width);
-		})	
-	},200000);
+	// setInterval(function() {
+	// 	$(".bar").each(function () {
+	// 		var widthP = $(this).parent().width();
+	// 		var width = Math.round($(this).width()/widthP*100)+"%";
+	// 		var percent = $(this).parent().siblings(".progress-title").children(".progress-percent");
+	// 		percent.empty().append(width);
+	// 	})	
+	// },200000);
 
 
 	$(".news-carousel-second").hide();

@@ -585,15 +585,15 @@ header {
 		}
 	}
 
-	&-text {
-		margin-top: 40px;
+	&-banner {
+		margin-top: $contentmargin;
 		text-align: center;
 		background-image: url("../images/portfolio.jpg");
 		@extend .background;
 
 		&-content {
 			background-color: rgba($accent, .7);
-			padding:60px 0;
+			padding:$bannerpadding 0;
 			
 
 		p {
@@ -691,7 +691,7 @@ header {
 		@extend .background;
 
 		&-content {
-			padding: 40px 0;
+			padding: $bannerpadding 0;
 			background-color: rgba($black, .7);
 
 			p {
@@ -714,23 +714,32 @@ header {
 		background-color: $white;
 
 		&-photo {
-			width: 100px;
-			height: 100px;
+			margin: 0 auto;
+			img {
+			width: 130px;
+			height: 130px;
 			border-radius: 50%;
+			}
 		}
 		&-content {
 			text-align: left;
 
 			&-text {
-				line-height: 1.5;
+				font-size: 16px;
+				color: $text;
+				line-height: 1.75;
 					
 			}
 			&-name {
+				font-weight: bold;
+				font-size: 16px;
 				color: $accent;
-				margin-top: 20px;
+				margin-top: 30px;
 			}
 			&-company {
 				margin-top: 10px;
+				font-size: 14px;
+				color: $grey;
 
 			}
 		}
