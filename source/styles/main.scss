@@ -27,7 +27,7 @@ section {
 		z-index: -1;
 	}
 }
-.about, .services, .featured, .portfolio, .team, .testimonials {
+.about, .services, .featured, .portfolio, .team, .testimonials, .news {
 	padding: $mainpadding;
 	text-align: center;
 }
@@ -714,16 +714,16 @@ header {
 		background-color: $white;
 
 		&-photo {
-			width: 50px;
-			height: 50px;
+			width: 100px;
+			height: 100px;
 			border-radius: 50%;
-			background-color: $accent;
 		}
 		&-content {
 			text-align: left;
 
 			&-text {
-
+				line-height: 1.5;
+					
 			}
 			&-name {
 				color: $accent;
@@ -737,6 +737,23 @@ header {
 	}
 }
 
+.news {
+	background-color: $black;
+	color: $white;
+
+	&-title {
+		text-align: left;
+	}
+	&-carousel {
+		text-align: left;
+
+		&-second {
+			top: 0;
+			position: absolute;
+		}
+	}
+
+}
 @import "components/media"
 
 

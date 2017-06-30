@@ -41,11 +41,22 @@ $(document).ready(function(){
 
 	setInterval(function() {
 		$(".bar").each(function () {
-			var widthP = $(this).parent().width()
-			var width = Math.round($(this).width()/widthP*100)+"%"
-			var percent = $(this).parent().siblings(".progress-title").children(".progress-percent")
-			percent.empty().append(width)
+			var widthP = $(this).parent().width();
+			var width = Math.round($(this).width()/widthP*100)+"%";
+			var percent = $(this).parent().siblings(".progress-title").children(".progress-percent");
+			percent.empty().append(width);
 		})	
-	},200000)
+	},200000);
+
+
+	$(".news-carousel-second").hide();
+	$(".btn-open").on("click", function() {
+		$(this).parent().fadeOut();
+		$(this).parent().siblings(".news-carousel-second").fadeIn();
+	})
+	$(".btn-close").on("click", function() {
+		$(this).parent().fadeOut();
+		$(this).parent().siblings(".news-carousel-first").fadeIn();
+	})
 });
 

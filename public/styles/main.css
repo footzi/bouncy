@@ -6128,7 +6128,7 @@ section {
   background-color: #f3f3f3;
   z-index: -1; }
 
-.about, .services, .featured, .portfolio, .team, .testimonials {
+.about, .services, .featured, .portfolio, .team, .testimonials, .news {
   padding: 5% 0 5% 0;
   text-align: center; }
 
@@ -6614,17 +6614,29 @@ header {
   padding: 40px 0;
   background-color: #fffFff; }
   .testimonials-carousel-photo {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #19bd9a; }
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; }
   .testimonials-carousel-content {
     text-align: left; }
+    .testimonials-carousel-content-text {
+      line-height: 1.5; }
     .testimonials-carousel-content-name {
       color: #19bd9a;
       margin-top: 20px; }
     .testimonials-carousel-content-company {
       margin-top: 10px; }
+
+.news {
+  background-color: #000000;
+  color: #fffFff; }
+  .news-title {
+    text-align: left; }
+  .news-carousel {
+    text-align: left; }
+    .news-carousel-second {
+      top: 0;
+      position: absolute; }
 
 @media only screen and (max-width: 1199px) {
   .portfolio-products-item-info-icons {
