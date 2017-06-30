@@ -39,20 +39,13 @@ $(document).ready(function(){
 		}
 	})
 
-	
-	setInterval (function() {
-		var widthPr = $(".progress").width();
-		
-		var widthBar1 = Math.round($(".bar-1").width()/widthPr*100)+"%";
-
-		$(".progress-percent-1").empty().append(widthBar1);
-
-		var widthBar2 = Math.round($(".bar-2").width()/widthPr*100)+"%";
-		$(".progress-percent-2").empty().append(widthBar2);
-
-		var widthBar3 = Math.round($(".bar-3").width()/widthPr*100)+"%";
-		$(".progress-percent-3").empty().append(widthBar3);
-	},10);
-	
+	setInterval(function() {
+		$(".bar").each(function () {
+			var widthP = $(this).parent().width()
+			var width = Math.round($(this).width()/widthP*100)+"%"
+			var percent = $(this).parent().siblings(".progress-title").children(".progress-percent")
+			percent.empty().append(width)
+		})	
+	},200000)
 });
 
