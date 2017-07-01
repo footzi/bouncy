@@ -49,14 +49,14 @@ $(document).ready(function(){
 	// },200000);
 
 
-	$(".news-carousel-second").hide();
+	$(".second-text").hide();
 	$(".btn-open").on("click", function() {
-		$(this).parent().fadeOut();
-		$(this).parent().siblings(".news-carousel-second").fadeIn();
+		$(this).hide();
+		$(this).parent().siblings(".second-text").fadeIn();
 	})
 	$(".btn-close").on("click", function() {
 		$(this).parent().fadeOut();
-		$(this).parent().siblings(".news-carousel-first").fadeIn();
+		$(".btn-open").show()
 	})
 });
 

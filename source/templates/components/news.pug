@@ -1,25 +1,45 @@
 .container
-	.row
+	.row-fluid
 		h2.news-title.title LATEST NEWS
 		h3.news-title.title-info.
-			At vero eos et accusamus et iusto odio dignissimos ducimus qui
+			At vero eos et accusamus et iusto odio dignissimos ducimus qui<br>
 			blanditiis praesentium
-		.row
-			.col-md-10.col-md-offset-2
+		.row-fluid
+			.col-lg-11.col-md-offset-1.col-lg-11.col-md-offset-1
 				.news-carousel.carousel.vertical.slide(data-ride="carousel", data-interval="1200000")
-					.row
-						.col-md-6
-							.carousel-inner
-								.item.active
-									.news-carousel-first
+					.container
+						.row-fluid
+							.col-md-6
+								.carousel-inner
+									.item.active
 										.news-carousel-title
 											p.news-carousel-title-name The tranding Landing Page
-											p.news-carousel-title-author BY KABUR UDIN
+											p.news-carousel-title-author KABUR UDIN
 											p.news-carousel-title-info 6950 likes - 243 comments - 703 shares
-										.news-carousel-text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta placeat, beatae. Labore harum rem repellendus, placeat repudiandae pariatur earum dignissimos! Rem qui soluta aut nesciunt eligendi libero nihil nulla obcaecati.
-										.news-carousel-button.btn-open + Read More
-									.news-carousel-second
-										.news-carousel-text Какой то текст к 1 статье. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta placeat, beatae. Labore harum rem repellendus, placeat repudiandae pariatur earum dignissimos!
-										.new-carousel-button.btn-close - Hide
-
+										.news-carousel-text.first-text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta placeat, beatae. Labore harum rem repellendus, placeat repudiandae pariatur earum dignissimos! Rem qui soluta aut nesciunt eligendi libero nihil nulla obcaecati.
+											.news-carousel-button.btn-open + Read More
+										.news-carousel-text.second-text Какой то текст к 1 статье. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta placeat, beatae. Labore harum rem repellendus, placeat repudiandae pariatur earum dignissimos!
+											.news-carousel-button.btn-close - Hide
+									.item
+										.news-carousel-title
+											p.news-carousel-title-name Frontend Dev Weekly
+											p.news-carousel-title-author JOHN GAVIN MALKOVICH
+											p.news-carousel-title-info 1502 likes - 120 comments - 507 shares
+										.news-carousel-text.first-text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta placeat, beatae. Labore harum rem repellendus, placeat repudiandae pariatur earum dignissimos! Rem qui soluta aut nesciunt eligendi libero nihil nulla obcaecati.
+											.news-carousel-button.btn-open + Read More
+										.news-carousel-text.second-text Какой то текст к 2 статье. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta placeat, beatae. Labore harum rem repellendus, placeat repudiandae pariatur earum dignissimos!
+											.news-carousel-button.btn-close - Hide
+									.item
+										.news-carousel-title
+											p.news-carousel-title-name 25 Magazine or News Style Web Designs for Inspiration
+											p.news-carousel-title-author BRUCE WILLIS
+											p.news-carousel-title-info 2595 likes - 365 comments - 117 shares
+										.news-carousel-text.first-text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta placeat, beatae. Labore harum rem repellendus, placeat repudiandae pariatur earum dignissimos! Rem qui soluta aut nesciunt eligendi libero nihil nulla obcaecati.
+											.news-carousel-button.btn-open + Read More
+										.news-carousel-text.second-text Какой то текст к 3 статье. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta placeat, beatae. Labore harum rem repellendus, placeat repudiandae pariatur earum dignissimos!
+											.news-carousel-button.btn-close - Hide
+								ol.carousel-indicators
+									li.active(data-target=".news-carousel" data-slide-to="0")
+									li(data-target=".news-carousel" data-slide-to="1")
+									li(data-target=".news-carousel" data-slide-to="2")
 

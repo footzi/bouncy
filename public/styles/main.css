@@ -6109,7 +6109,8 @@ img {
 
 body {
   line-height: 1.75;
-  font-family: OpenSans-regular; }
+  font-family: OpenSans-regular;
+  overflow-x: hidden; }
 
 .wrapper {
   padding: 60px 0 60px 0; }
@@ -6179,7 +6180,7 @@ a:hover {
 .color-text {
   color: #19bd9a; }
 
-.background, header, .featured-carousel-slide-img-1, .featured-carousel-slide-img-2, .featured-carousel-slide-img-3, .featured-carousel-slide-img-4, .featured-carousel-slide-img-5, .featured-carousel-slide-img-6, .featured-text, .slogan, .portfolio-banner, .team-banner {
+.background, header, .featured-carousel-slide-img-1, .featured-carousel-slide-img-2, .featured-carousel-slide-img-3, .featured-carousel-slide-img-4, .featured-carousel-slide-img-5, .featured-carousel-slide-img-6, .featured-text, .slogan, .portfolio-banner, .team-banner, .news {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; }
@@ -6636,12 +6637,57 @@ header {
       color: #464646; }
 
 .news {
-  background-color: #000000;
+  background-image: url("../images/news-bg.jpg");
+  background-attachment: fixed;
   color: #fffFff; }
+  .news::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 0; }
   .news-title {
-    text-align: left; }
+    color: #fffFff;
+    text-align: left;
+    position: relative;
+    z-index: 1; }
+  .news .title-info {
+    color: #b2b3b3;
+    margin-top: 20px; }
   .news-carousel {
+    margin-top: 70px;
     text-align: left; }
+    .news-carousel-title-name {
+      font-size: 20px;
+      color: #e1e4e9; }
+    .news-carousel-title-author {
+      margin: 15px 0;
+      color: #19bd9a;
+      font-family: SourceSansProLight;
+      font-size: 14px; }
+      .news-carousel-title-author::before {
+        content: "BY ";
+        color: #81868e; }
+    .news-carousel-title-info {
+      font-family: SourceSansProLight;
+      font-size: 14px;
+      color: #81868e; }
+    .news-carousel-text {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #81868e;
+      line-height: 1.786; }
+    .news-carousel .second-text {
+      margin-top: 0; }
+    .news-carousel-button {
+      margin-top: 20px;
+      font-size: 16px;
+      color: #b2b3b3;
+      cursor: pointer; }
     .news-carousel-second {
       top: 0;
       position: absolute; }
