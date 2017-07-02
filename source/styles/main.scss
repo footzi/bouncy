@@ -5,839 +5,872 @@
 @import "components/var";
 @import "components/keyframes";
 body {
-	line-height: 1.75;
-	font-family: OpenSans-regular;
-	overflow-x: hidden;
+    line-height: 1.75;
+    font-family: OpenSans-regular;
+    overflow-x: hidden;
 }
-.wrapper {
-	padding:$mainpadding;
-}
-section {
-	position: relative;
-}
-.overlay {
-	&::before {
-		content: "";
-		width: 100%;
-		height: 100%;
-		display: block;
-		position: absolute;
-		top: 0;
-		left: 0;
-		background-color: $bg;
-		z-index: -1;
-	}
-}
-.about, .services, .featured, .portfolio, .team, .testimonials, .news {
-	padding: $mainpadding;
-	text-align: center;
-}
-.title {
-	font: {
-		family:SourceSansProLight;
-		size:20px;
-	}
-	color:$title;
-	letter-spacing: 5px;
-}
-.title-info {
-	font: {
-		family:SourceSansProLight;
-		size:16px;
-	}
-	color:$text;
-	margin-top: $contentmargin;
-	line-height: 1.5;
-}
-.buttons {
-	font-size:14px;
-	border:1px solid $white;
-	border-radius:15px;
-	color:$white;
-	background-color:transparent;
-	padding: 5px 30px 5px 30px;
-}
-.icon {
-	width: 55px;
-	height: 55px;
-	border-radius: 50px;
-	background-color:$accent;
-	font-size: 30px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color:$white;
-	cursor: pointer;
-}
-a:hover {
-	text-decoration: none;
-}
-.icon-active {
-	background-color:$text;
-	color:$white;
-	transition:0.5s all;
-}
-.bold-text {
-	color: $bold;
-}
-.color-text {
-	color: $accent;
-}
-.background {
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
 
+.wrapper {
+    padding: $mainpadding;
 }
+
+section {
+    position: relative;
+}
+
+.overlay {
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $bg;
+        z-index: -1;
+    }
+}
+
+.about,
+.services,
+.featured,
+.portfolio,
+.team,
+.testimonials,
+.news,
+.price {
+    padding: $mainpadding;
+    text-align: center;
+}
+
+.title {
+    font: {
+        family: SourceSansProLight;
+        size: 20px;
+    }
+    color:$title;
+    letter-spacing: 5px;
+}
+
+.title-info {
+    font: {
+        family: SourceSansProLight;
+        size: 16px;
+    }
+    color:$text;
+    margin-top: $contentmargin;
+    line-height: 1.5;
+}
+
+.buttons {
+    font-size: 14px;
+    border: 1px solid $white;
+    border-radius: 15px;
+    color: $white;
+    background-color: transparent;
+    padding: 5px 30px 5px 30px;
+}
+
+.icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 50px;
+    background-color: $accent;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.icon-active {
+    background-color: $text;
+    color: $white;
+    transition: 0.5s all;
+}
+
+.bold-text {
+    color: $bold;
+}
+
+.color-text {
+    color: $accent;
+}
+
+.background {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .is-checked:after {
-	opacity: 1 !important;
-	margin: 10px 10px 0 10px !important; 
+    opacity: 1 !important;
+    margin: 10px 10px 0 10px !important;
 }
+
 .flex-row {
-	flex-direction: row;
-	display: flex;
+    flex-direction: row;
+    display: flex;
 }
+
 a {
-	cursor: pointer;
+    cursor: pointer;
 }
+
 .info-mini {
-	top: -20px !important;
+    top: -20px !important;
 }
+
 .animation {
-	animation-duration: 5s;
-	animation-iteration-count: infinite;
-	animation-direction: alternate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 .carousel-indicators {
-	display: flex;
-	justify-content: center;
-	bottom: 0;
-	left: 0;
-	margin: 60px 0 0 0;
-	padding: 0;
-	position: relative;
-	width: 100%;
-
-	li {
-		width: 10px;
-		height: 10px;
-		border-radius: 50%; 
-		border: 1px solid $accent;
-		margin: 5px;
-		list-style-type: none;
-		cursor: pointer;
-	}
-
-	.active {
-		background-color: $accent;
-		margin: 5px;
-		width: 10px;
-		height: 10px;
-	}
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    left: 0;
+    margin: 60px 0 0 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    li {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: 1px solid $accent;
+        margin: 5px;
+        list-style-type: none;
+        cursor: pointer;
+    }
+    .active {
+        background-color: $accent;
+        margin: 5px;
+        width: 10px;
+        height: 10px;
+    }
 }
 
 //header
-header {						
-	background-image: url("../images/header-bg.jpg");
-		@extend .background;
-		&-wrapper {
-			background-color:rgba($black, .5);
-			display:flex;
-			flex-direction:column;
-			justify-content:space-between;
-			height: 100vh;
-			// height: 108vh;
-			padding: 25px 0 35px 0;	
-		}
+header {
+    background-image: url("../images/header-bg.jpg");
+    @extend .background;
+    &-wrapper {
+        background-color: rgba($black, .5);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100vh;
+        // height: 108vh;
+        padding: 25px 0 35px 0;
+    }
 }
 
 .navbar {
-	padding: 0 70px;
-		a {
-			color:white;
-		}
+    padding: 0 70px;
+    a {
+        color: white;
+    }
 }
+
 .navbar-brand {
-	font: {
-		family:BigJohn;
-		size:22px;
-	}
-	margin-top: 12px;
+    font: {
+        family: BigJohn;
+        size: 22px;
+    }
+    margin-top: 12px;
 }
+
 .navbar-nav {
-	margin-top:6px;
+    margin-top: 6px;
 }
+
 .navbar-nav>li>a {
-		font-size:16px;
-		padding:5px 10px 5px 10px;
-		border:2px solid transparent;
-		border-radius: 10px;
-
-		&:hover {
-			background-color: transparent;
-			border:2px solid white;
-		}
+    font-size: 16px;
+    padding: 5px 10px 5px 10px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    &:hover {
+        background-color: transparent;
+        border: 2px solid white;
+    }
 }
-.header-banner {
-	color:white;
-	text-align: center;
 
-		&-title {
-			font: {
-				family:SourceSansProLight;
-				size:35px;
-			}
-			letter-spacing: 5px;
-		}
-		&-content {
-			margin-top: 20px;
-			font-size:16px;
-			line-height: 1.75;
-		}
+.header-banner {
+    color: white;
+    text-align: center;
+    &-title {
+        font: {
+            family: SourceSansProLight;
+            size: 35px;
+        }
+        letter-spacing: 5px;
+    }
+    &-content {
+        margin-top: 20px;
+        font-size: 16px;
+        line-height: 1.75;
+    }
 }
 
 .header-icon {
-	font: {
-		size:35px;
-	}
-
-	&-cicle {
-		width: 35px;
-		height: 35px;
-		border-radius:50%;
-		background-color:$accent;
-		margin:0 auto;
-		position: relative;
-
-		i {
-			color:$white;
-			position:absolute;
-			left:0;
-			right:0;
-		}
-	}
+    font: {
+        size: 35px;
+    }
+    &-cicle {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background-color: $accent;
+        margin: 0 auto;
+        position: relative;
+        i {
+            color: $white;
+            position: absolute;
+            left: 0;
+            right: 0;
+        }
+    }
 }
 
 ///about
 .about {
-	padding-bottom: 0;
-	&-text {
-		margin-bottom: 100px;
-
-		&-content {
-			font-size:14px;
-			color:$text;
-			margin:50px 0 50px 0;
-		}
-		&-button {
-			border:1px solid $title;
-			color:$title;
-		}
-	}
-	&-image {
-		img {
-			margin: 0 auto;
-		}
-	}
-	.wrapper-about-details {
-		background-color: $bg;
-	}
-	&-details {
-		padding: $mainpadding;
-		text-align: center;
-
-		&-icons {
-			margin-top:80px; 
-			
-			ul {
-				display: flex;
-				flex-direction: row;
-				justify-content: center;	
-			}
-			.icon {
-				text-decoration: none;
-				margin: 0 12px;
-			}
-		}
-		&-contents {
-			text-align: left;
-			color:$text;
-			font-size: 16px;
-		}
-		&-content-title {
-			margin: 50px 0 25px 0;
-			font-size:20px;
-			color:$grey;
-		}
-	}
+    padding-bottom: 0;
+    &-text {
+        margin-bottom: 100px;
+        &-content {
+            font-size: 14px;
+            color: $text;
+            margin: 50px 0 50px 0;
+        }
+        &-button {
+            border: 1px solid $title;
+            color: $title;
+        }
+    }
+    &-image {
+        img {
+            margin: 0 auto;
+        }
+    }
+    .wrapper-about-details {
+        background-color: $bg;
+    }
+    &-details {
+        padding: $mainpadding;
+        text-align: center;
+        &-icons {
+            margin-top: 80px;
+            ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+            .icon {
+                text-decoration: none;
+                margin: 0 12px;
+            }
+        }
+        &-contents {
+            text-align: left;
+            color: $text;
+            font-size: 16px;
+        }
+        &-content-title {
+            margin: 50px 0 25px 0;
+            font-size: 20px;
+            color: $grey;
+        }
+    }
 }
 
 //featured
 .featured {
-	padding-bottom:0;
-
-	&-carousel {
-		margin-top: $contentmargin;
-
-		&-slide {
-			height: 320px;
-		&-img-1, &-img-2, &-img-3, &-img-4, &-img-5, &-img-6  {
-			@extend .background;
-			height: 100%;
-		}
-		&-img-1 {
-			background-image: url("../images/1.jpg")
-		}
-		&-img-2 {
-			background-image: url("../images/2.jpg")
-		}
-		&-img-3 {
-			background-image: url("../images/3.jpg")
-		}
-		&-img-4 {
-			background-image: url("../images/4.jpg")
-		}
-		&-img-5 {
-			background-image: url("../images/5.jpg")
-		}
-		&-img-6 {
-			background-image: url("../images/6.jpg")
-		}
-			&-text {
-				width: 100%;
-				height: 100%;
-				background-color:rgba($black, .7);
-				font-size: 20px;
-				display: flex;
-				align-items:center;
-				justify-content: center;
-
-				p {
-					font: {
-						family:SourceSansProLight;
-						size:20px;
-					}
-					letter-spacing: 10px;
-					color:$white
-				}
-			}
-		}
-	}
-	&-text {
-		background-image: url("../images/7.jpg");
-		height: 130px;/////!!!!!!!
-		@extend .background;
-
-		&-content {
-			height: 100%;
-			background-color:rgba($accent,0.7);
-			display: flex;
-			align-items: center;
-
-			p {
-			font-size: 25px;
-			color:$white;
-			}
-			&-button {
-				border:1px solid $white;
-				color:$white;
-			}
-		}
-		
-	}
+    padding-bottom: 0;
+    &-carousel {
+        margin-top: $contentmargin;
+        &-slide {
+            height: 320px;
+            &-img-1,
+            &-img-2,
+            &-img-3,
+            &-img-4,
+            &-img-5,
+            &-img-6 {
+                @extend .background;
+                height: 100%;
+            }
+            &-img-1 {
+                background-image: url("../images/1.jpg")
+            }
+            &-img-2 {
+                background-image: url("../images/2.jpg")
+            }
+            &-img-3 {
+                background-image: url("../images/3.jpg")
+            }
+            &-img-4 {
+                background-image: url("../images/4.jpg")
+            }
+            &-img-5 {
+                background-image: url("../images/5.jpg")
+            }
+            &-img-6 {
+                background-image: url("../images/6.jpg")
+            }
+            &-text {
+                width: 100%;
+                height: 100%;
+                background-color: rgba($black, .7);
+                font-size: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                p {
+                    font: {
+                        family: SourceSansProLight;
+                        size: 20px;
+                    }
+                    letter-spacing: 10px;
+                    color:$white
+                }
+            }
+        }
+    }
+    &-text {
+        background-image: url("../images/7.jpg");
+        height: 130px; /////!!!!!!!
+        @extend .background;
+        &-content {
+            height: 100%;
+            background-color: rgba($accent, 0.7);
+            display: flex;
+            align-items: center;
+            p {
+                font-size: 25px;
+                color: $white;
+            }
+            &-button {
+                border: 1px solid $white;
+                color: $white;
+            }
+        }
+    }
 }
 
 //services
 .services {
-	&-content {
-		margin-top: $contentmargin;
-
-		&-icon {
-			display: flex;
-			flex-direction: column;
-			position: relative;
-       		z-index:9999;
-
-			li {
-				margin-bottom: 15px;
-
-				&:last-child {
-					margin-bottom: 0;
-				}
-			}
-			.icon {
-				text-decoration: none;
-			}
-		}
-
-		&-items {
-			margin-left: 20px;
-			text-align: left;
-
-			&-title {
-				font-size: 20px;
-				color:$grey;
-			}
-			p {
-				font-size:16px;
-				color:$text;
-				margin-top: 20px;
-				line-height: 1.75;
-			}
-		}
-		&-charts {
-			display: flex;
-			flex-direction: row;
-			justify-content: center;
-
-			.chart {
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				margin: 30px 10px 0 10px;
-
-				&-text {
-					font-size: 25px;
-					position: absolute;
-					color: $text;
-
-					i {
-
-						font-size: 14px;
-					}	
-				}
-				p {
-					font: {
-						family: RobotoLight;
-						size: 16px;
-					}
-					position: absolute;
-					bottom: -40px;
-					color: $text;
-				}
-			}			
-		}
-	}
+    &-content {
+        margin-top: $contentmargin;
+        &-icon {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            z-index: 9999;
+            li {
+                margin-bottom: 15px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            .icon {
+                text-decoration: none;
+            }
+        }
+        &-items {
+            margin-left: 20px;
+            text-align: left;
+            &-title {
+                font-size: 20px;
+                color: $grey;
+            }
+            p {
+                font-size: 16px;
+                color: $text;
+                margin-top: 20px;
+                line-height: 1.75;
+            }
+        }
+        &-charts {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            .chart {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 30px 10px 0 10px;
+                &-text {
+                    font-size: 25px;
+                    position: absolute;
+                    color: $text;
+                    i {
+                        font-size: 14px;
+                    }
+                }
+                p {
+                    font: {
+                        family: RobotoLight;
+                        size: 16px;
+                    }
+                    position: absolute;
+                    bottom: -40px;
+                    color: $text;
+                }
+            }
+        }
+    }
 }
 
 //slogan
-
 .slogan {
-	background-image: url("../images/slogan-bg.jpg");
-	@extend .background;
-
-	.wrapper {
-		background-color:rgba($black, .8);
-	}
-	&-title {
-		font: {
-			family: SourceSansProLight;
-			size: 20px;
-		}
-		color: #f3f3f3;
-		letter-spacing: 5px;
-	}
-	&-text {
-		margin-top: $contentmargin;
-		color: $grey2;
-		line-height: 1.75;
-	}
-	&-sign {
-		margin-top: 30px;
-		color: $grey2;
-		font-size: 14px;
-
-		&-name {
-			font-weight: 800;
-			margin-bottom: 10px;
-		}
-	}
-	&-img {
-		img {
-			position: absolute;
-			top:-150px;
-		}
-	}
+    background-image: url("../images/slogan-bg.jpg");
+    @extend .background;
+    .wrapper {
+        background-color: rgba($black, .8);
+    }
+    &-title {
+        font: {
+            family: SourceSansProLight;
+            size: 20px;
+        }
+        color: #f3f3f3;
+        letter-spacing: 5px;
+    }
+    &-text {
+        margin-top: $contentmargin;
+        color: $grey2;
+        line-height: 1.75;
+    }
+    &-sign {
+        margin-top: 30px;
+        color: $grey2;
+        font-size: 14px;
+        &-name {
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+    }
+    &-img {
+        img {
+            position: absolute;
+            top: -150px;
+        }
+    }
 }
 
 //portfolio
-
 .portfolio {
-	&-content {
-		margin-top: $contentmargin;
-	}
-	&-nav {
-			display: flex;
-			flex-direction: row;
-			justify-content: center;
-			flex-wrap: wrap;
-
-			li {
-				margin: 0 20px;
-				margin-bottom: 10px;
-
-				&:last-child {
-					margin-right: 0;
-				}
-			}
-	}
-	&-link {
-		color:$grey;
-		text-decoration: none;
-		font-size: 16px;
-	
-		&:after {
-				content:" ";
-				height: 2px;
-				display: block;
-				margin: 10px 0px 0 0px;
-				background-color: $accent;
-				opacity: 0;
-				transition: all 0.5s;
-		}
-	}
-
-	&-products {
-		margin-top: 30px;
-		display: flex;
-	
-		&-item {
-			margin: 10px 2% 0 2%;
-			position: relative;
-			display: flex;
-
-			img {
-				margin: 0 auto;
-			}
-			&-info {
-				opacity: 0;
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				padding:0 40px;
-				background-color:rgba($black, .8);
-				color:$white;
-				display:flex;
-				text-align: left;
-				flex-direction: column;
-				justify-content: center;
-				transition: opacity 0.2s ease;
-
-				h4 {
-					font: {
-						family: SourceSansProLight;
-						size: 20px;
-					}
-					letter-spacing: 5px;
-					color:$accent;
-					white-space: nowrap;
-
-					&:after {
-						content: "";
-						display: block;
-						margin-top: 10px;
-						height: 1px;
-						width: 20px;
-						margin-left: 50px;
-						background-color: $accent;
-						transition: all ease-out 0.5s;
-					}
-				}
-				p {
-					font-size: 12px;
-					margin-top: 20px;
-					color:$grey2;
-					line-height: 1.7;
-				}
-				&-icons {
-					margin-top: 60px;
-					display: flex;
-					position: relative;
-					top: 30px;
-					transition: top ease-out 0.5s;
-
-					.item-icon {
-						background-color: $black;
-						width: 30px;
-						height: 30px;
-
-						&:last-child {
-							margin-left: 5px;
-						}
-						i {
-							font-size: 15px;
-						}
-					}
-				}
-			}
-
-			&:hover .portfolio-products-item-info {
-				opacity: 1;
-			}
-			&:hover .portfolio-products-item-info-icons {
-				top: 0;
-			}
-			&:hover .portfolio-products-item-info h4:after {
-				margin-left: 0;
-			}
-		}
-	}
-
-	&-banner {
-		margin-top: $contentmargin;
-		text-align: center;
-		background-image: url("../images/portfolio.jpg");
-		@extend .background;
-
-		&-content {
-			background-color: rgba($accent, .7);
-			padding:$bannerpadding 0;
-			
-
-		p {
-			font-size: 20px;
-			color:$white;
-			line-height: 1.2;
-			}
-		&-button {
-			margin-top: 30px;
-			}
-		}
-	}
+    &-content {
+        margin-top: $contentmargin;
+    }
+    &-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        li {
+            margin: 0 20px;
+            margin-bottom: 10px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    &-link {
+        color: $grey;
+        text-decoration: none;
+        font-size: 16px;
+        &:after {
+            content: " ";
+            height: 2px;
+            display: block;
+            margin: 10px 0px 0 0px;
+            background-color: $accent;
+            opacity: 0;
+            transition: all 0.5s;
+        }
+    }
+    &-products {
+        margin-top: 30px;
+        display: flex;
+        &-item {
+            margin: 10px 2% 0 2%;
+            position: relative;
+            display: flex;
+            img {
+                margin: 0 auto;
+            }
+            &-info {
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                padding: 0 40px;
+                background-color: rgba($black, .8);
+                color: $white;
+                display: flex;
+                text-align: left;
+                flex-direction: column;
+                justify-content: center;
+                transition: opacity 0.2s ease;
+                h4 {
+                    font: {
+                        family: SourceSansProLight;
+                        size: 20px;
+                    }
+                    letter-spacing: 5px;
+                    color:$accent;
+                    white-space: nowrap;
+                    &:after {
+                        content: "";
+                        display: block;
+                        margin-top: 10px;
+                        height: 1px;
+                        width: 20px;
+                        margin-left: 50px;
+                        background-color: $accent;
+                        transition: all ease-out 0.5s;
+                    }
+                }
+                p {
+                    font-size: 12px;
+                    margin-top: 20px;
+                    color: $grey2;
+                    line-height: 1.7;
+                }
+                &-icons {
+                    margin-top: 60px;
+                    display: flex;
+                    position: relative;
+                    top: 30px;
+                    transition: top ease-out 0.5s;
+                    .item-icon {
+                        background-color: $black;
+                        width: 30px;
+                        height: 30px;
+                        &:last-child {
+                            margin-left: 5px;
+                        }
+                        i {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+            &:hover .portfolio-products-item-info {
+                opacity: 1;
+            }
+            &:hover .portfolio-products-item-info-icons {
+                top: 0;
+            }
+            &:hover .portfolio-products-item-info h4:after {
+                margin-left: 0;
+            }
+        }
+    }
+    &-banner {
+        margin-top: $contentmargin;
+        text-align: center;
+        background-image: url("../images/portfolio.jpg");
+        @extend .background;
+        &-content {
+            background-color: rgba($accent, .7);
+            padding: $bannerpadding 0;
+            p {
+                font-size: 20px;
+                color: $white;
+                line-height: 1.2;
+            }
+            &-button {
+                margin-top: 30px;
+            }
+        }
+    }
 }
 
 //team
-
 .team {
-	#carousel-team {
-		margin-top: $contentmargin;
-	}
-	&-photo {
-		img {
-			position: fixed;
-		}
-	}
-	&-about {
-		text-align: right;
-		color: $text;
-
-		&-title {
-			padding-right: 30px;
-			border-right: 4px solid $accent;
-
-			&-name {
-				color: $grey;
-				font-size: 20px;
-				white-space: nowrap;
-			}
-			&-post {
-				font: {
-					family: SourceSansProLight;
-					size: 14px;
-				}
-				margin-top: 10px;									
-			}	
-		}
-		&-text {
-			font-size: 14px;
-			padding-right: 30px;
-			margin-top: 30px;
-		}
-		&-progress {
-			margin-top: 40px;
-
-			&-item {
-				margin-bottom: 35px;
-
-				.progress-title {
-					display: flex;
-					flex-direction: row;
-					justify-content: space-between;
-					font-size: 16px;
-				}
-				.progress {
-					width: 100%;
-					height: 4px;
-					background-color: #e1e4e9;
-					margin-top: 10px;
-
-					.bar {
-						height: 100%;
-						background-color: $accent;
-						@extend .animation;
-					}
-					.bar-1 {
-						animation-name: bar-1;
-					}
-					.bar-2 {
-						animation-name: bar-2;
-					}
-					.bar-3 {
-						animation-name: bar-3;
-					}
-				}
-				&:last-child {
-					margin-bottom: 0;
-				}
-			}
-		}
-	}
-	&-banner {
-		margin-top: 40px;
-		text-align: center;
-		background-image:url("../images/portfolio.jpg");
-		@extend .background;
-
-		&-content {
-			padding: $bannerpadding 0;
-			background-color: rgba($black, .7);
-
-			p {
-				font-size: 20px;
-				color: $white;
-				line-height: 1.2;
-			}
-			&-button {
-				margin-top: 30px;
-			}
-		}
-	}
+    #carousel-team {
+        margin-top: $contentmargin;
+    }
+    &-photo {
+        img {
+            position: fixed;
+        }
+    }
+    &-about {
+        text-align: right;
+        color: $text;
+        &-title {
+            padding-right: 30px;
+            border-right: 4px solid $accent;
+            &-name {
+                color: $grey;
+                font-size: 20px;
+                white-space: nowrap;
+            }
+            &-post {
+                font: {
+                    family: SourceSansProLight;
+                    size: 14px;
+                }
+                margin-top: 10px;
+            }
+        }
+        &-text {
+            font-size: 14px;
+            padding-right: 30px;
+            margin-top: 30px;
+        }
+        &-progress {
+            margin-top: 40px;
+            &-item {
+                margin-bottom: 35px;
+                .progress-title {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    font-size: 16px;
+                }
+                .progress {
+                    width: 100%;
+                    height: 4px;
+                    background-color: #e1e4e9;
+                    margin-top: 10px;
+                    .bar {
+                        height: 100%;
+                        background-color: $accent;
+                        @extend .animation;
+                    }
+                    .bar-1 {
+                        animation-name: bar-1;
+                    }
+                    .bar-2 {
+                        animation-name: bar-2;
+                    }
+                    .bar-3 {
+                        animation-name: bar-3;
+                    }
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    &-banner {
+        margin-top: 40px;
+        text-align: center;
+        background-image: url("../images/portfolio.jpg");
+        @extend .background;
+        &-content {
+            padding: $bannerpadding 0;
+            background-color: rgba($black, .7);
+            p {
+                font-size: 20px;
+                color: $white;
+                line-height: 1.2;
+            }
+            &-button {
+                margin-top: 30px;
+            }
+        }
+    }
 }
 
 //testimonials
 .testimonials {
-	&-carousel {
-		margin-top: $contentmargin;
-		padding: 40px 0;
-		background-color: $white;
-
-		&-photo {
-			margin: 0 auto;
-			img {
-			width: 130px;
-			height: 130px;
-			border-radius: 50%;
-			}
-		}
-		&-content {
-			text-align: left;
-
-			&-text {
-				font-size: 16px;
-				color: $text;
-				line-height: 1.75;
-					
-			}
-			&-name {
-				font-weight: bold;
-				font-size: 16px;
-				color: $accent;
-				margin-top: 30px;
-			}
-			&-company {
-				margin-top: 10px;
-				font-size: 14px;
-				color: $grey;
-
-			}
-		}
-	}
+    &-carousel {
+        margin-top: $contentmargin;
+        padding: 40px 0;
+        background-color: $white;
+        &-photo {
+            margin: 0 auto;
+            img {
+                width: 130px;
+                height: 130px;
+                border-radius: 50%;
+            }
+        }
+        &-content {
+            text-align: left;
+            &-text {
+                font-size: 16px;
+                color: $text;
+                line-height: 1.75;
+            }
+            &-name {
+                font-weight: bold;
+                font-size: 16px;
+                color: $accent;
+                margin-top: 30px;
+            }
+            &-company {
+                margin-top: 10px;
+                font-size: 14px;
+                color: $grey;
+            }
+        }
+    }
 }
 
+//news
 .news {
-	background-image: url("../images/news-bg.jpg");
-	@extend .background;
-	background-attachment: fixed;
-	color: $white;
-	&::before {
-		content: "";
-		width: 100%;
-		height: 100%;
-		display: block;
-		position: absolute;
-		top: 0;
-		left: 0;
-		background-color: rgba($black, .8);
-		z-index: 0;
-	}
-	&-title {
-		color: $white;
-		text-align: left;
-		position: relative;
-		z-index: 1;
-	}
-	.title-info {
-		color: #b2b3b3;
-		margin-top: 20px;
-	}
-	
-	&-carousel {
-		margin-top: 70px;
-		text-align: left;
-
-		&-title {
-			&-name {
-				font-size: 20px;
-				color: #e1e4e9;
-			}
-			&-author {
-				margin: 15px 0;
-				color: $accent;
-				font: {
-					family: SourceSansProLight;
-					size: 14px
-				}
-				&::before {
-					content: "BY ";
-					color: $text;
-
-				}
-			}
-			&-info {
-				font: {
-					family: SourceSansProLight;
-					size: 14px;
-				}
-				color: $text;
-			}
-		}
-		&-text {
-			margin-top: 30px;
-			font-size: 14px;
-			color: $text;
-			line-height: 1.786;
-		}
-		.second-text {
-			margin-top: 0;
-		}
-		&-button {
-			margin-top: 20px;
-			font-size: 16px;
-			color: $grey2;
-			cursor: pointer;
-		}
-		&-second {
-			top: 0;
-			position: absolute;
-		}
-	}
-
+    background-image: url("../images/news-bg.jpg");
+    @extend .background;
+    background-attachment: fixed;
+    color: $white;
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba($black, .8);
+        z-index: 0;
+    }
+    &-title {
+        color: $white;
+        text-align: left;
+        position: relative;
+        z-index: 1;
+    }
+    .title-info {
+        color: #b2b3b3;
+        margin-top: 20px;
+    }
+    &-carousel {
+        margin-top: 70px;
+        text-align: left;
+        &-title {
+            &-name {
+                font-size: 20px;
+                color: #e1e4e9;
+            }
+            &-author {
+                margin: 15px 0;
+                color: $accent;
+                font: {
+                    family: SourceSansProLight;
+                    size: 14px
+                }
+                &::before {
+                    content: "BY ";
+                    color: $text;
+                }
+            }
+            &-info {
+                font: {
+                    family: SourceSansProLight;
+                    size: 14px;
+                }
+                color: $text;
+            }
+        }
+        &-text {
+            margin-top: 30px;
+            font-size: 14px;
+            color: $text;
+            line-height: 1.786;
+        }
+        .second-text {
+            margin-top: 0;
+        }
+        &-button {
+            margin-top: 20px;
+            font-size: 16px;
+            color: $grey2;
+            cursor: pointer;
+        }
+        &-second {
+            top: 0;
+            position: absolute;
+        }
+    }
+    .carousel-indicators {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .vertical .carousel-inner {
+        height: 100%;
+    }
+    .carousel.vertical .item {
+        transition: 0.6s ease-in-out top;
+    }
+    .carousel.vertical .active {
+        top: 0;
+    }
+    .carousel.vertical .next {
+        top: 100%;
+    }
+    .carousel.vertical .prev {
+        top: -100%;
+    }
+    .carousel.vertical .next.left,
+    .carousel.vertical .prev.right {
+        top: 0;
+    }
+    .carousel.vertical .active.left {
+        top: -100%;
+    }
+    .carousel.vertical .active.right {
+        top: 100%;
+    }
+    .carousel.vertical .item {
+        left: 0;
+    }
 }
+
+//price
+.price {
+    &-content {
+        margin-top: $contentmargin;
+    }
+    &-item {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        &-title {
+            padding: 20px 0;
+            font-size: 20px;
+            font-weight: bold;
+            background-color: $accent;
+            color: $white;
+        }
+        &-content {
+            padding: 60px 0 80px;
+            background-color: $white;
+            &-price {
+                font: {
+                    family: SourceSansProBlack;
+                    size: 40px;
+                }
+                color: $accent;
+            }
+            &-time {
+                margin-top: 10px;
+                color: $text;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.price-item :nth-child(2) {
+    display: none;
+}
+
 @import "components/media"
-
-
-
-
-
-
-
-
-
-
-
-
-
-

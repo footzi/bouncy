@@ -14,6 +14,10 @@
   font-family: RobotoLight;
   src: url("../fonts/RobotoLight.ttf"); }
 
+@font-face {
+  font-family: SourceSansProBlack;
+  src: url("../fonts/source-sans-pro.black.ttf"); }
+
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -6129,7 +6133,14 @@ section {
   background-color: #f3f3f3;
   z-index: -1; }
 
-.about, .services, .featured, .portfolio, .team, .testimonials, .news {
+.about,
+.services,
+.featured,
+.portfolio,
+.team,
+.testimonials,
+.news,
+.price {
   padding: 60px 0 60px 0;
   text-align: center; }
 
@@ -6691,6 +6702,56 @@ header {
     .news-carousel-second {
       top: 0;
       position: absolute; }
+  .news .carousel-indicators {
+    flex-direction: column;
+    align-items: flex-end; }
+  .news .vertical .carousel-inner {
+    height: 100%; }
+  .news .carousel.vertical .item {
+    transition: 0.6s ease-in-out top; }
+  .news .carousel.vertical .active {
+    top: 0; }
+  .news .carousel.vertical .next {
+    top: 100%; }
+  .news .carousel.vertical .prev {
+    top: -100%; }
+  .news .carousel.vertical .next.left,
+  .news .carousel.vertical .prev.right {
+    top: 0; }
+  .news .carousel.vertical .active.left {
+    top: -100%; }
+  .news .carousel.vertical .active.right {
+    top: 100%; }
+  .news .carousel.vertical .item {
+    left: 0; }
+
+.price-content {
+  margin-top: 40px; }
+
+.price-item {
+  display: flex;
+  flex-direction: column;
+  text-align: center; }
+  .price-item-title {
+    padding: 20px 0;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #19bd9a;
+    color: #fffFff; }
+  .price-item-content {
+    padding: 60px 0 80px;
+    background-color: #fffFff; }
+    .price-item-content-price {
+      font-family: SourceSansProBlack;
+      font-size: 40px;
+      color: #19bd9a; }
+    .price-item-content-time {
+      margin-top: 10px;
+      color: #81868e;
+      font-size: 20px; }
+
+.price-item :nth-child(2) {
+  display: none; }
 
 @media only screen and (max-width: 1199px) {
   .portfolio-products-item-info-icons {
@@ -6743,7 +6804,9 @@ header {
     margin: 0 auto; }
   .testimonials-carousel-content {
     margin-top: 10px;
-    text-align: center; } }
+    text-align: center; }
+  .news .carousel-indicators {
+    flex-direction: row; } }
 
 @media only screen and (max-width: 768px) {
   .services-content-icon .icon {

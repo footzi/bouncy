@@ -77,6 +77,10 @@
         margin-top: 10px; 
         text-align: center;
     }
+
+    .news .carousel-indicators {
+        flex-direction: row;
+    }
 }
 
 @media only screen and (max-width:768px) {
