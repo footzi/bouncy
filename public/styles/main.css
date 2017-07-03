@@ -6316,7 +6316,7 @@ header {
     padding: 60px 0 60px 0;
     text-align: center; }
     .about-details-icons {
-      margin-top: 80px; }
+      margin-top: 40px; }
       .about-details-icons ul {
         display: flex;
         flex-direction: row;
@@ -6329,7 +6329,7 @@ header {
       color: #81868e;
       font-size: 16px; }
     .about-details-content-title {
-      margin: 50px 0 25px 0;
+      margin: 40px 0 25px 0;
       font-size: 20px;
       color: #464646; }
 
@@ -6479,7 +6479,7 @@ header {
     transition: all 0.5s; }
 
 .portfolio-products {
-  margin-top: 30px;
+  margin-top: 40px;
   display: flex; }
   .portfolio-products-item {
     margin: 10px 2% 0 2%;
@@ -6670,7 +6670,7 @@ header {
     color: #b2b3b3;
     margin-top: 20px; }
   .news-carousel {
-    margin-top: 70px;
+    margin-top: 40px;
     text-align: left; }
     .news-carousel-title-name {
       font-size: 20px;
@@ -6750,8 +6750,18 @@ header {
       color: #81868e;
       font-size: 20px; }
 
-.price-item :nth-child(2) {
-  display: none; }
+.price .item-2 {
+  flex-direction: column-reverse; }
+  .price .item-2 .price-item-title {
+    font-size: 16px; }
+  .price .item-2 .price-item-content {
+    padding: 40px 0 40px; }
+    .price .item-2 .price-item-content p {
+      font-size: 14px;
+      color: #81868e;
+      margin-bottom: 10px; }
+    .price .item-2 .price-item-content p:last-child {
+      margin-bottom: 0; }
 
 @media only screen and (max-width: 1199px) {
   .portfolio-products-item-info-icons {
@@ -6814,7 +6824,11 @@ header {
   .portfolio-products-item-info {
     padding: 0 40px; }
     .portfolio-products-item-info-icons {
-      margin-top: 40px; } }
+      margin-top: 40px; }
+  .price-item {
+    margin-bottom: 30px; }
+  .price .item-2 {
+    flex-direction: column; } }
 
 @media only screen and (max-width: 480px) {
   .navbar {
