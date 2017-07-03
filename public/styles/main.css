@@ -6140,7 +6140,8 @@ section {
 .team,
 .testimonials,
 .news,
-.price {
+.price,
+.contacts {
   padding: 60px 0 60px 0;
   text-align: center; }
 
@@ -6763,6 +6764,44 @@ header {
     .price .item-2 .price-item-content p:last-child {
       margin-bottom: 0; }
 
+.contacts-content {
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-between; }
+
+.contacts-item-icon {
+  padding: 30px 50px;
+  background-color: rgba(0, 0, 0, 0.5); }
+  .contacts-item-icon i {
+    font-size: 30px; }
+
+.contacts-item-text {
+  background-color: #fffFff;
+  padding: 10px 0; }
+  .contacts-item-text h4 {
+    margin-bottom: 10px; }
+
+.contacts-form {
+  padding: 40px;
+  background-color: #fffFff; }
+  .contacts-form .form {
+    display: flex;
+    flex-direction: column; }
+    .contacts-form .form .form-inputs {
+      display: flex;
+      justify-content: space-between; }
+      .contacts-form .form .form-inputs input {
+        padding: 10px 50px 10px 10px;
+        border: 1px solid #464646; }
+    .contacts-form .form textarea {
+      margin: 10px 0;
+      width: 100%;
+      height: 300px; }
+    .contacts-form .form button {
+      width: 100%;
+      background-color: #19bd9a;
+      color: #fffFff; }
+
 @media only screen and (max-width: 1199px) {
   .portfolio-products-item-info-icons {
     margin-top: 20px; } }
@@ -6834,7 +6873,12 @@ header {
   .navbar {
     padding: 0 20px; }
   .services-content-charts .chart {
-    margin: 10px 5px 0 5px; } }
+    margin: 10px 5px 0 5px; }
+  .contacts-content {
+    flex-direction: column; }
+  .contacts-item {
+    width: 100%;
+    margin: 30px auto auto; } }
 
 @media only screen and (max-width: 320px) {
   .services-content-charts .chart {

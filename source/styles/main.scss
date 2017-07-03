@@ -39,7 +39,8 @@ section {
 .team,
 .testimonials,
 .news,
-.price {
+.price,
+.contacts {
     padding: $mainpadding;
     text-align: center;
 }
@@ -886,4 +887,55 @@ header {
     }
 }
 
+.contacts {
+	&-content {
+		padding: $contentmargin 0;
+		display: flex;
+		justify-content:  space-between;
+	}	
+	&-item {
+		//box-shadow
+		&-icon {
+			padding: 30px 50px;
+			background-color: rgba($black, .5);
+			i {
+				font-size: 30px;
+			}
+		}
+		&-text {
+			background-color: $white;
+			padding:10px 0;
+			h4 {
+				margin-bottom: 10px;
+			}
+		}
+	}
+	&-form {
+		padding: $contentmargin;
+		background-color: $white;
+		.form {
+			display: flex;
+			flex-direction: column;
+			.form-inputs {
+				display: flex;
+				justify-content: space-between;
+				input {
+					padding: 10px 50px 10px 10px;
+					border: 1px solid $grey;
+				}
+			}
+			textarea {
+				margin: 10px 0;
+				width: 100%;
+				height: 300px;
+			}
+			button {
+				width: 100%;
+				background-color: $accent;
+				color: $white;
+			}
+		}
+		
+	}
+}
 @import "components/media"
