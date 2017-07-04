@@ -78,6 +78,17 @@
     .news .carousel-indicators {
         flex-direction: row;
     }
+    .contacts-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .contacts-item {
+        margin-bottom: 20px;
+        width: 300px;
+        &:last-child() {
+            margin-bottom: 0;
+        }
+    }
 }
 
 @media only screen and (max-width:768px) {
@@ -98,6 +109,16 @@
     .price .item-2 {
         flex-direction: column;
     }
+    .subscribe-content {
+        flex-direction: column;
+        input {
+            width: 100%;
+        }
+        button {
+            margin-top: 20px;
+            width: 100%;
+        }
+    }
 }
 
 @media only screen and (max-width:480px) {
@@ -109,12 +130,8 @@
             margin: 10px 5px 0 5px;
         }
     }
-    .contacts-content {
-        flex-direction: column;
-    }
     .contacts-item {
-        width:100%;
-        margin: 30px auto auto;
+        width: 250px;
     }
 }
 

@@ -40,6 +40,7 @@ section {
 .testimonials,
 .news,
 .price,
+.subscribe,
 .contacts {
     padding: $mainpadding;
     text-align: center;
@@ -887,55 +888,133 @@ header {
     }
 }
 
-.contacts {
-	&-content {
-		padding: $contentmargin 0;
-		display: flex;
-		justify-content:  space-between;
-	}	
-	&-item {
-		//box-shadow
-		&-icon {
-			padding: 30px 50px;
-			background-color: rgba($black, .5);
-			i {
-				font-size: 30px;
-			}
-		}
-		&-text {
-			background-color: $white;
-			padding:10px 0;
-			h4 {
-				margin-bottom: 10px;
-			}
-		}
-	}
-	&-form {
-		padding: $contentmargin;
-		background-color: $white;
-		.form {
-			display: flex;
-			flex-direction: column;
-			.form-inputs {
-				display: flex;
-				justify-content: space-between;
-				input {
-					padding: 10px 50px 10px 10px;
-					border: 1px solid $grey;
-				}
-			}
-			textarea {
-				margin: 10px 0;
-				width: 100%;
-				height: 300px;
-			}
-			button {
-				width: 100%;
-				background-color: $accent;
-				color: $white;
-			}
-		}
-		
-	}
+//subscribe
+.subscribe {
+    background-image: url("../images/subscribe-bg.jpg");
+    @extend .background;
+    .title {
+        color: $white;
+    }
+    &-content {
+        margin-top: $contentmargin;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+        input {
+            width: 360px;
+            padding: 10px 0 10px 20px;
+            font-size: 14px;
+            color: $black;
+            border: 1px solid #cfd3d4;
+            margin-right: 10px;
+        }
+        button {
+            width: 150px;
+            font-size: 14px;
+            color: $white;
+            padding: 10px 50px;
+            background-color: $accent;
+            border-radius: 0;
+        }
+    }
 }
+
+//contacts
+.contacts {
+    &-content {
+        padding: $contentmargin 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    &-item {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        width: 30%;
+        &-icon {
+            display: flex;
+            justify-content: center;
+            padding: 60px 0;
+            @extend .background;
+            i {
+                font-size: 50px;
+                color: $white;
+            }
+        }
+        &-text {
+            background-color: $white;
+            padding: 30px 0;
+            h4 {
+                font-size: 16px;
+                color: $grey;
+                margin-bottom: 25px;
+            }
+            p {
+                font-size: 14px;
+                color: $text;
+                margin-bottom: 10px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        .contacts-email {
+            background-image: url("../images/contacts/1.jpg");
+        }
+        .contacts-office {
+            background-image: url("../images/contacts/2.jpg");
+        }
+        .contacts-phone {
+            background-image: url("../images/contacts/3.jpg");
+        }
+    }
+    &-form {
+        padding: $mainpadding;
+        background-color: $white;
+        .form {
+            display: flex;
+            flex-direction: column;
+            .form-inputs {
+                display: flex;
+                justify-content: space-between;
+                input {
+                    padding: 15px 0 15px 20px;
+                    width: 30%;
+                    border: 1px solid #d8dce0;
+                }
+                 ::-webkit-input-placeholder {
+                    color: #a9a9a9;
+                    font-size: 14px;
+                }
+                 ::-moz-placeholder {
+                    color: #a9a9a9;
+                    font-size: 14px;
+                }
+                /* Firefox 19+ */
+                 :-moz-placeholder {
+                    color: #a9a9a9;
+                    font-size: 14px;
+                }
+                /* Firefox 18- */
+                 :-ms-input-placeholder {
+                    color: #a9a9a9;
+                    font-size: 14px;
+                }
+            }
+            textarea {
+                margin: 30px 0;
+                width: 100%;
+                height: 190px;
+                border: 1px solid #d8dce0;
+            }
+            button {
+                padding: 20px 0;
+                font-size: 16px;
+                width: 100%;
+                background-color: $accent;
+                color: $white;
+                border-radius: 0;
+            }
+        }
+    }
+}
+
 @import "components/media"
