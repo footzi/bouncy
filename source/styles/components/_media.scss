@@ -89,6 +89,16 @@
             margin-bottom: 0;
         }
     }
+    .form-inputs {
+        flex-direction: column;
+        input {
+            width: 100% !important;
+            margin-bottom: $itemmargin;
+            &:last-child {
+                margin-bottom: 0
+            }
+        }
+    }
 }
 
 @media only screen and (max-width:768px) {

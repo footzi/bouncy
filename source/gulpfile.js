@@ -41,10 +41,10 @@ gulp.task('sass', function () {
 //js
 gulp.task("js", function() {
     return gulp.src([
-        //'libs/jquery/dist/jquery.min.js',
-        //'libs/bootstrap/dist/js/bootstrap.min.js',
-        //'libs/jquery-circle-progress/dist/circle-progress.min.js',
-        //'js/*'
+        'libs/jquery/dist/jquery.min.js',
+        'libs/bootstrap/dist/js/bootstrap.min.js',
+        'libs/jquery-circle-progress/dist/circle-progress.min.js',
+        'js/*'
     ])
     .pipe(concat('main.min.js'))
     .pipe(uglify())

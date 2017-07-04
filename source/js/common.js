@@ -58,4 +58,24 @@ $(document).ready(function() {
         $(this).parent().fadeOut();
         $(".btn-open").show()
     })
+
+
+
+
+    // var map;
+    //         function initMap() {
+    //             map = new google.maps.Map(document.getElementById('map'), {
+    //                 center: {lat: -34.397, lng: 150.644},
+    //                 zoom: 8
+    //             });
+            //}
+
+    var map;
+        
+    ymaps.ready(function(){
+        map = new ymaps.Map(document.getElementById('map-yandex'), {
+            center: [59.94, 30.24],
+            zoom: 5
+        });
+    });
 });
