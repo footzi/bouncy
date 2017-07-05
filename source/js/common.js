@@ -60,22 +60,22 @@ $(document).ready(function() {
     })
 
 
-
-
-    // var map;
-    //         function initMap() {
-    //             map = new google.maps.Map(document.getElementById('map'), {
-    //                 center: {lat: -34.397, lng: 150.644},
-    //                 zoom: 8
-    //             });
-            //}
-
     var map;
-        
-    ymaps.ready(function(){
+    ymaps.ready(function() {
         map = new ymaps.Map(document.getElementById('map-yandex'), {
             center: [59.94, 30.24],
-            zoom: 5
+            zoom: 10
         });
+        var myPlacemark = new ymaps.Placemark([59.947417, 30.234915]);
+        map.geoObjects.add(myPlacemark)
+        map.controls.add('mapTools');
+        map.controls.add('zoomControl');
+
     });
+
+    $(".map").hover(function() {
+        $(".map-overlay").fadeOut()
+    }, function() {
+        $(".map-overlay").fadeIn()
+    })
 });
