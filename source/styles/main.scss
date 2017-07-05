@@ -1,6 +1,7 @@
 @import "components/fonts";
 @import "../libs/bootstrap/dist/css/bootstrap.min";
 @import "../libs/pe-icon-7-stroke/pe-icon-7-stroke";
+@import "../libs/font-awesome/css/font-awesome";
 @import "components/reset";
 @import "components/var";
 @import "components/keyframes";
@@ -41,7 +42,8 @@ section {
 .news,
 .price,
 .subscribe,
-.contacts {
+.contacts,
+.footer	{
     padding: $mainpadding;
     text-align: center;
 }
@@ -1025,7 +1027,7 @@ header {
     .map-overlay {
         position: absolute;
         top: 0;
-        z-index: 10000;
+        z-index: 9999;
         width: 100%;
         height: 100%;
         display: flex;
@@ -1034,33 +1036,37 @@ header {
         background-color: rgba($black, .5);
         transition: 0.5 all;
         i {
+        	border: 1px solid $accent;
+        	border-radius: 50%;
+        	background-color: $accent;
             font-size: 30px;
             color: white;
         }
+        p {
+        	color: $white;
+        	margin-right: 20px;
+        }
     }
-    // &:hover .map-overlay {
-    //     transition: 0.5 all;
-    //     display: none;
-    // }
 }
 
-// .ymaps-map::before {
-//     content: "";
-//     width: 100%;
-//     height: 100%;
-//     display: block;
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     background-color: rgba($black, .5);
-//     z-index: 9999;
-// }
-// .map-overlay {
-// 			position: absolute;
-// 			width: 100%;
-// 			height: 100%;
-// 			top: 0;
-// 			left: 0;
-// 			background-color: rgba($bg, .5);
-// 		}
+.footer {
+	.h4 {
+		font-size: 20px;
+	}
+	.p {
+		color: $text;
+		margin-bottom: 20px;
+	}
+	&-icons {
+	}
+	.footer-icon {
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		background-color: blue;
+		display: block;
+		color: $white;
+		font-size: 20px;
+	}
+}
 @import "components/media"
