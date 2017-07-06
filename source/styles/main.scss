@@ -1,10 +1,11 @@
 @import "components/fonts";
 @import "../libs/bootstrap/dist/css/bootstrap.min";
 @import "../libs/pe-icon-7-stroke/pe-icon-7-stroke";
-@import "../libs/font-awesome/css/font-awesome";
+// @import "../libs/font-awesome/css/font-awesome";
 @import "components/reset";
 @import "components/var";
 @import "components/keyframes";
+@import "components/fontello";
 body {
     line-height: 1.75;
     font-family: OpenSans-regular;
@@ -43,7 +44,7 @@ section {
 .price,
 .subscribe,
 .contacts,
-.footer	{
+.footer {
     padding: $mainpadding;
     text-align: center;
 }
@@ -180,9 +181,19 @@ header {
 
 .navbar {
     padding: 0 70px;
+    position: fixed;
+    width: 100%;
+    transition: 0.8s ease-in padding;
     a {
         color: white;
     }
+}
+
+.navbar-fixed {
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    padding: 0;
+    transition: 0.8s ease-out padding;
 }
 
 .navbar-brand {
@@ -202,10 +213,14 @@ header {
     padding: 5px 10px 5px 10px;
     border: 2px solid transparent;
     border-radius: 10px;
+    background-color: transparent !important;
     &:hover {
-        background-color: transparent;
         border: 2px solid white;
     }
+}
+
+.active-link {
+    border: 2px solid white !important;
 }
 
 .header-banner {
@@ -426,7 +441,7 @@ header {
                         size: 16px;
                     }
                     position: absolute;
-                    bottom: -40px;
+                    bottom: -30px;
                     color: $text;
                 }
             }
@@ -528,7 +543,7 @@ header {
                 flex-direction: column;
                 justify-content: center;
                 transition: opacity 0.2s ease;
-                h4 {
+                .h4 {
                     font: {
                         family: SourceSansProLight;
                         size: 20px;
@@ -578,7 +593,7 @@ header {
             &:hover .portfolio-products-item-info-icons {
                 top: 0;
             }
-            &:hover .portfolio-products-item-info h4:after {
+            &:hover .portfolio-products-item-info .h4:after {
                 margin-left: 0;
             }
         }
@@ -841,9 +856,12 @@ header {
 //price
 .price {
     &-content {
+        display: flex;
+        justify-content: space-between;
         margin-top: $contentmargin;
     }
     &-item {
+        width: 230px;
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -944,7 +962,7 @@ header {
         &-text {
             background-color: $white;
             padding: 30px 0;
-            h4 {
+            .h4 {
                 font-size: 16px;
                 color: $grey;
                 margin-bottom: 25px;
@@ -1033,40 +1051,75 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: rgba($black, .5);
-        transition: 0.5 all;
+        background-color: rgba($black, .7);
         i {
-        	border: 1px solid $accent;
-        	border-radius: 50%;
-        	background-color: $accent;
-            font-size: 30px;
+            border: 1px solid $accent;
+            border-radius: 50%;
+            background-color: $accent;
+            font-size: 20px;
             color: white;
         }
         p {
-        	color: $white;
-        	margin-right: 20px;
+            color: $white;
+            margin-right: 20px;
+            font-size: 16px;
+            letter-spacing: 1px;
         }
     }
 }
 
 .footer {
-	.h4 {
-		font-size: 20px;
-	}
-	.p {
-		color: $text;
-		margin-bottom: 20px;
-	}
-	&-icons {
-	}
-	.footer-icon {
-		width: 50px;
-		height: 50px;
-		border-radius: 50%;
-		background-color: blue;
-		display: block;
-		color: $white;
-		font-size: 20px;
-	}
+    .h4 {
+        font: {
+            family: BigJohn;
+            size: 25px;
+        }
+        color: $black;
+    }
+    p {
+        font-size: 14px;
+        color: $text;
+        margin-top: 25px;
+        margin-bottom: 40px;
+        letter-spacing: 1px;
+    }
+    &-icons {
+        display: flex;
+        justify-content: center;
+        li {
+            margin-right: 10px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        a {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            i {
+                color: $white;
+                font-size: 14px;
+            }
+        }
+    }
+    .facebook {
+        background-color: #3b5998;
+    }
+    .twitter {
+        background-color: #26a6d1;
+    }
+    .linkedin {
+        background-color: #0e76a8;
+    }
+    .instagram {
+        background-color: #3f729b;
+    }
+    .vimeo {
+        background-color: #86c9ef;
+    }
 }
+
 @import "components/media"

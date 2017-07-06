@@ -9,11 +9,11 @@ html
 		header
 			include components/header
 		main
-			section.about
+			section.about(data-anchor="about")
 				include components/about
 			section.featured
 				include components/featured	
-			section.services.overlay
+			section.services.overlay(data-anchor="services")
 				include components/services
 			section.slogan
 				include components/slogan
