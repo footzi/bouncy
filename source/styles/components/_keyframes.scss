@@ -1,26 +1,47 @@
-// @keyframes bar-1 {
-// 	from {
-// 		width:0%
-// 	}
-// 	to {
-// 		width:100%;
-// 	}
-// }
+@keyframes bar-1 {
+	from {
+		width:0%;
+	}
+	to {
+		width:100%;
+	}
+}
 
-// @keyframes bar-2 {
-// 	from {
-// 		width:0%
-// 	}
-// 	to {
-// 		width:70%;
-// 	}
-// }
+@keyframes bar-2 {
+	from {
+		width:0%;
+	}
+	to {
+		width:70%;
+	}
+}
 
-// @keyframes bar-3 {
-// 	from {
-// 		width:0%
-// 	}
-// 	to {
-// 		width:50%;
-// 	}
-// }
+@keyframes bar-3 {
+	from {
+		width:0%;
+	}
+	to {
+		width:50%;
+	}
+}
+
+@keyframes spin {
+    from {
+      opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes spin2 {
+    from {
+            transform: scale(0,0)
+    }
+    to {
+            transform: scale(2,2)
+    }
+}

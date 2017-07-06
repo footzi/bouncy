@@ -6112,6 +6112,38 @@ ul {
 img {
   border: 0; }
 
+@keyframes bar-1 {
+  from {
+    width: 0%; }
+  to {
+    width: 100%; } }
+
+@keyframes bar-2 {
+  from {
+    width: 0%; }
+  to {
+    width: 70%; } }
+
+@keyframes bar-3 {
+  from {
+    width: 0%; }
+  to {
+    width: 50%; } }
+
+@keyframes spin {
+  from {
+    opacity: 1; }
+  50% {
+    opacity: 0.3; }
+  to {
+    opacity: 0; } }
+
+@keyframes spin2 {
+  from {
+    transform: scale(0, 0); }
+  to {
+    transform: scale(2, 2); } }
+
 @font-face {
   font-family: 'fontello';
   src: url("../fonts/fontello/fontello.eot?86059781");
@@ -6307,6 +6339,34 @@ a {
     width: 10px;
     height: 10px; }
 
+.preloader {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: #fffFff;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .preloader .load {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    border-radius: 50%;
+    border: 2px solid #19bd9a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: spin 1s ease-out infinite; }
+    .preloader .load::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 1px solid #19bd9a;
+      animation: spin2 1s ease-out infinite; }
+
 header {
   background-image: url("../images/header-bg.jpg"); }
   header-wrapper {
@@ -6339,17 +6399,12 @@ header {
 .navbar-nav {
   margin-top: 6px; }
 
-.navbar-nav > li > a {
+.navbar-link {
   font-size: 16px;
   padding: 5px 10px 5px 10px;
   border: 2px solid transparent;
   border-radius: 10px;
   background-color: transparent !important; }
-  .navbar-nav > li > a:hover {
-    border: 2px solid white; }
-
-.active-link {
-  border: 2px solid white !important; }
 
 .header-banner {
   color: white;

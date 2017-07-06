@@ -131,7 +131,7 @@ a {
 .info-mini {
     top: -20px !important;
 }
-
+//уьрать
 .animation {
     animation-duration: 5s;
     animation-iteration-count: infinite;
@@ -163,6 +163,40 @@ a {
         height: 10px;
     }
 }
+
+//preloader
+
+.preloader {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: $white;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .load {
+        width: 50px;
+        height: 50px;
+        position: relative;
+        border-radius: 50%;
+        border: 2px solid $accent;
+        display: flex;
+        align-items: center;
+        justify-content: center;    
+        animation: spin 1s ease-out infinite;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 1px solid $accent;
+            animation: spin2 1s ease-out infinite;
+        }
+    }
+}
+
 
 //header
 header {
@@ -208,21 +242,13 @@ header {
     margin-top: 6px;
 }
 
-.navbar-nav>li>a {
+.navbar-link {
     font-size: 16px;
     padding: 5px 10px 5px 10px;
     border: 2px solid transparent;
     border-radius: 10px;
     background-color: transparent !important;
-    &:hover {
-        border: 2px solid white;
-    }
 }
-
-.active-link {
-    border: 2px solid white !important;
-}
-
 .header-banner {
     color: white;
     text-align: center;

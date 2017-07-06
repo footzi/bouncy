@@ -6,24 +6,26 @@ html
 		title BOUNCE
 		link(rel="stylesheet" href="styles/main.css")
 	body
-		header
+		.preloader
+			.load
+		header.header
 			include components/header
 		main
-			section.about(data-anchor="about")
+			section.about
 				include components/about
 			section.featured
 				include components/featured	
-			section.services.overlay(data-anchor="services")
+			section.services.overlay
 				include components/services
 			section.slogan
 				include components/slogan
 			section.portfolio.overlay
 				include components/portfolio
-			section.team
+			section.team.sec
 				include components/team
 			section.testimonials.overlay
 				include components/testimonials
-			section.news
+			section.news.sec
 				include components/news
 			section.price.overlay
 				include components/price

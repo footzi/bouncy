@@ -84,29 +84,24 @@ $(document).ready(function() {
     //fixed-navbar
     $(window).scroll(function() {
         if ($(this).scrollTop() > $(".navbar").height()) {
-            $(".navbar").addClass("navbar-fixed")
+            $(".navbar").addClass("navbar-fixed");
         } else {
-            $(".navbar").removeClass("navbar-fixed")
+            $(".navbar").removeClass("navbar-fixed");
         }
     })
 
-    //
-    $('.navbar-nav>li>a').on('click', function() {
-        var scrollAnchor = $(this).attr('data-scroll'),
-            scrollPoint = $('section[data-anchor="' + scrollAnchor + '"]').offset().top;
-        $('body,html').animate({
-            scrollTop: scrollPoint
-        }, 500);
-        return false;
-    });
 
-    $(window).scroll(function() {
-        var windscroll = $(window).scrollTop();
-        $('section').each(function(i) {
-            if ($(this).position().top <= windscroll + 10) {
-                $('.navbar-nav>li>a.active-link').removeClass('active-link');
-                $('.navbar-nav>li>a').eq(i).addClass('active-link');
-            }
-        });
-    }).scroll();
+    //scroll to
+    $(".navbar-link").on("click", function(e){
+        e.preventDefault();
+        var id = $(this).attr("data-scroll");
+        var top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 1500);
+    })
+
+
 });
+
+$(window).on("load", function() {
+    $(".preloader").delay(1000).fadeOut();
+})
