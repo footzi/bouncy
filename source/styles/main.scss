@@ -1,15 +1,16 @@
 @import "components/fonts";
 @import "../libs/bootstrap/dist/css/bootstrap.min";
 @import "../libs/pe-icon-7-stroke/pe-icon-7-stroke";
-// @import "../libs/font-awesome/css/font-awesome";
 @import "components/reset";
 @import "components/var";
 @import "components/keyframes";
 @import "components/fontello";
 body {
     line-height: 1.75;
-    font-family: OpenSans-regular;
+    font-family: OpenSans;
     overflow-x: hidden;
+    min-width: 320px;
+    position: relative;
 }
 
 .wrapper {
@@ -83,9 +84,7 @@ section {
     border-radius: 50px;
     background-color: $accent;
     font-size: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @extend .flex-center;
     color: $white;
     cursor: pointer;
 }
@@ -124,6 +123,12 @@ a:hover {
     display: flex;
 }
 
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 a {
     cursor: pointer;
 }
@@ -131,7 +136,7 @@ a {
 .info-mini {
     top: -20px !important;
 }
-//уьрать
+
 .animation {
     animation-duration: 5s;
     animation-iteration-count: infinite;
@@ -165,25 +170,20 @@ a {
 }
 
 //preloader
-
 .preloader {
     width: 100vw;
     height: 100vh;
     position: fixed;
-    background-color: $white;
+    background-color: rgba($black, .8);
     z-index: 10000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @extend .flex-center;
     .load {
         width: 50px;
         height: 50px;
         position: relative;
         border-radius: 50%;
         border: 2px solid $accent;
-        display: flex;
-        align-items: center;
-        justify-content: center;    
+        @extend .flex-center;
         animation: spin 1s ease-out infinite;
         &::after {
             content: "";
@@ -197,6 +197,32 @@ a {
     }
 }
 
+//scroll-top
+.scroll-top {
+    position: fixed;
+    bottom: -100px;
+    right: -100px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: $accent;
+    z-index: 10000;
+    cursor: pointer;
+    transition: 0.5s all;
+    @extend .flex-center;
+    &:hover {
+        opacity: 0.5;
+    }
+    i {
+        font-size: 30px;
+        color: white;
+    }
+}
+
+.active-scroll-top {
+    bottom: 10px;
+    right: 10px;
+}
 
 //header
 header {
@@ -215,19 +241,9 @@ header {
 
 .navbar {
     padding: 0 70px;
-    position: fixed;
-    width: 100%;
-    transition: 0.8s ease-in padding;
     a {
         color: white;
     }
-}
-
-.navbar-fixed {
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 2;
-    padding: 0;
-    transition: 0.8s ease-out padding;
 }
 
 .navbar-brand {
@@ -235,7 +251,7 @@ header {
         family: BigJohn;
         size: 22px;
     }
-    margin-top: 12px;
+    margin-top: 20px;
 }
 
 .navbar-nav {
@@ -245,10 +261,15 @@ header {
 .navbar-link {
     font-size: 16px;
     padding: 5px 10px 5px 10px;
-    border: 2px solid transparent;
+    border: 1px solid transparent;
     border-radius: 10px;
     background-color: transparent !important;
+    transition: 0.5s color;
+    &:hover {
+        color: $accent;
+    }
 }
+
 .header-banner {
     color: white;
     text-align: center;
@@ -376,9 +397,7 @@ header {
                 height: 100%;
                 background-color: rgba($black, .7);
                 font-size: 20px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                @extend .flex-center;
                 p {
                     font: {
                         family: SourceSansProLight;
@@ -449,9 +468,7 @@ header {
             flex-direction: row;
             justify-content: center;
             .chart {
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                @extend .flex-center;
                 margin: 30px 10px 0 10px;
                 &-text {
                     font-size: 25px;
@@ -463,7 +480,7 @@ header {
                 }
                 p {
                     font: {
-                        family: RobotoLight;
+                        family: SourceSansProLight;
                         size: 16px;
                     }
                     position: absolute;
@@ -903,7 +920,7 @@ header {
             background-color: $white;
             &-price {
                 font: {
-                    family: SourceSansProBlack;
+                    family: BigJohn;
                     size: 40px;
                 }
                 color: $accent;
@@ -1074,9 +1091,7 @@ header {
         z-index: 9999;
         width: 100%;
         height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @extend .flex-center;
         background-color: rgba($black, .7);
         i {
             border: 1px solid $accent;
@@ -1122,9 +1137,7 @@ header {
             width: 25px;
             height: 25px;
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @extend .flex-center;
             i {
                 color: $white;
                 font-size: 14px;

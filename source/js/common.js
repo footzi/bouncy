@@ -60,6 +60,7 @@ $(document).ready(function() {
     })
 
 
+    //yandex map
     var map;
     ymaps.ready(function() {
         map = new ymaps.Map(document.getElementById('map-yandex'), {
@@ -73,7 +74,6 @@ $(document).ready(function() {
 
     });
 
-    //yandex map
     $(".map").hover(function() {
         $(".map-overlay").fadeOut()
     }, function() {
@@ -81,27 +81,28 @@ $(document).ready(function() {
     })
 
 
-    //fixed-navbar
-    $(window).scroll(function() {
-        if ($(this).scrollTop() > $(".navbar").height()) {
-            $(".navbar").addClass("navbar-fixed");
-        } else {
-            $(".navbar").removeClass("navbar-fixed");
-        }
-    })
-
-
     //scroll to
-    $(".navbar-link").on("click", function(e){
+    $(".navbar-link").on("click", function(e) {
         e.preventDefault();
         var id = $(this).attr("data-scroll");
         var top = $(id).offset().top;
-        $('body,html').animate({scrollTop: top}, 1500);
+        $('body,html').animate({ scrollTop: top }, 1500);
     })
 
-
+    //scroll-top
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > $(this).height()) {
+            $(".scroll-top").addClass("active-scroll-top")
+        } else {
+            $(".scroll-top").removeClass("active-scroll-top")
+        }
+    })
+    $(".scroll-top").on("click", function() {
+        $('body,html').animate({ scrollTop: 0 }, 1500);
+    })
 });
 
-$(window).on("load", function() {
-    $(".preloader").delay(1000).fadeOut();
-})
+
+// $(window).on("load", function() {
+//     $(".preloader").delay(1000).fadeOut();
+// })
