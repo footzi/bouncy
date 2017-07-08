@@ -26,7 +26,7 @@ gulp.task('pug', function() {
 //sass
 gulp.task('sass', function() {
     return gulp.src('styles/**/*.scss')
-        // .pipe(sass({outputStyle: 'compressed'}))
+        .pipe(sass({ outputStyle: 'compressed' }))
         .pipe(sass({}))
         .on('error', notify.onError({
             title: 'SASS Compilation Failed',
@@ -35,7 +35,7 @@ gulp.task('sass', function() {
         .pipe(browserSync.reload({
             stream: true
         }))
-        // .pipe(rename("main.min.css"))
+        //.pipe(rename("main.min.css"))
         .pipe(gulp.dest('../public/styles'));
 });
 
@@ -58,7 +58,7 @@ gulp.task("js", function() {
 
 //image
 gulp.task("image", function() {
-    return gulp.src("images/**/*")
+    return gulp.src("images/**/*.+(jpg|png)")
         .pipe(imagemin({
             interlaced: true,
             progressive: true,
@@ -79,7 +79,7 @@ gulp.task('browserSync', function() {
     browserSync({
         server: {
             baseDir: '../public'
-        }
+        },
     })
 });
 
@@ -99,7 +99,7 @@ gulp.task('watch', ['browserSync', 'sass'], function() {
     gulp.watch('js/**/*.js', ['js'])
     gulp.watch('images/**/*', ['image'])
     gulp.watch('fonts/**/*', ['fonts'])
-    //gulp.watch("../public/styles/main.css", ["autoprefixer"])
+        //gulp.watch("../public/styles/main.css", ["autoprefixer"])
     gulp.watch('../public/*.html', browserSync.reload)
     gulp.watch('../public/js/**/*', browserSync.reload)
 });

@@ -1,10 +1,4 @@
-@media only screen and (max-width:1199px) {
-    .portfolio-products-item-info {
-        &-icons {
-            margin-top: $itemmargin;
-        }
-    }
-}
+@media only screen and (max-width:1199px) {}
 
 @media only screen and (max-width:992px) {
     .navbar-brand {
@@ -48,6 +42,7 @@
         flex-wrap: wrap;
         justify-content: center;
         &-column {
+            // width: 50%;
             display: block;
         }
     }
@@ -172,16 +167,22 @@
     }
 }
 
-
-
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) 
-{
-    html{
+@media screen and (-ms-high-contrast: active),
+(-ms-high-contrast: none) {
+    html {
         overflow: hidden;
-        height: 100%;    
+        height: 100%;
     }
-    body{
+    body {
         overflow: auto;
         height: 100%;
+    }
+    .portfolio-products-column {
+        width: 25%;
+    }
+    @media only screen and (max-width:992px) {
+        .portfolio-products-column {
+            width: inherit;
+        }
     }
 }

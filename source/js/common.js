@@ -1,7 +1,18 @@
 $(document).ready(function() {
 
-    $("#governance, #creative, #graphic, #game, #full").hide();
+    //show/hide banner in header
+    $(".navbar-toggle").on("click", function() {
+        var open = $(".header-banner").is(":visible")
+        if (open) {
+            $(".header-banner").fadeOut()
+        } else {
+            $(".header-banner").fadeIn()
+        }
+    })
 
+
+    //featured
+    $("#governance, #creative, #graphic, #game, #full").hide();
     $(".icon").on("click", function() {
         var select = $(this).attr("data-link");
         if ((select == "#customer") || (select == "#governance") || (select == "#creative")) {
@@ -17,28 +28,25 @@ $(document).ready(function() {
     })
 
 
+    //porfolio
     $(".portfolio-nav a").on("click", function() {
         var link = $(this).attr("data-filter")
-
         if (link == ".all") {
             $(".portfolio-products-item").fadeIn()
             $(".portfolio-link").removeClass("is-checked")
             $(".portfolio-products-column").removeClass("flex-row")
-
             $(this).addClass("is-checked")
-
         } else {
             $(".portfolio-products-item").hide()
             $(".portfolio-link").removeClass("is-checked")
             $(".portfolio-products-column").addClass("flex-row")
-
             $(this).addClass("is-checked")
             $(link).fadeIn()
-
-
         }
     })
 
+
+    //progress-bar
     setInterval(function() {
         $(".bar").each(function() {
             var widthP = $(this).parent().width();
@@ -46,9 +54,10 @@ $(document).ready(function() {
             var percent = $(this).parent().siblings(".progress-title").children(".progress-percent");
             percent.empty().append(width);
         })
-    }, 200000);
+    }, 500);
 
 
+    //news
     $(".second-text").hide();
     $(".btn-open").on("click", function() {
         $(this).hide();
