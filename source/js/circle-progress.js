@@ -34,4 +34,4 @@ c3.circleProgress({
     $(this).find('strong').html(Math.round(100 * progress) + '<i>%</i>');
 });
 
-setInterval(function() { c1.circleProgress(), c2.circleProgress(), c3.circleProgress(); }, 800000);
+setInterval(function() { c1.circleProgress(), c2.circleProgress(), c3.circleProgress(); }, 8000);
