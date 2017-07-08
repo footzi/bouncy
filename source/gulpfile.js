@@ -99,7 +99,7 @@ gulp.task('watch', ['browserSync', 'sass'], function() {
     gulp.watch('js/**/*.js', ['js'])
     gulp.watch('images/**/*', ['image'])
     gulp.watch('fonts/**/*', ['fonts'])
-    gulp.watch("../public/styles/main.css", ["autoprefixer"])
+    //gulp.watch("../public/styles/main.css", ["autoprefixer"])
     gulp.watch('../public/*.html', browserSync.reload)
     gulp.watch('../public/js/**/*', browserSync.reload)
 });

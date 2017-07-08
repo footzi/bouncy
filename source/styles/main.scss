@@ -565,14 +565,18 @@ header {
     &-products {
         margin-top: $contentmargin;
         display: flex;
+        &-column {
+            width: 25%;
+        }
         &-item {
             margin: 10px 2% 0 2%;
             position: relative;
             display: flex;
             img {
-                margin: 0 auto;
+                width: 100%;
             }
             &-info {
+                //display: none !important;
                 opacity: 0;
                 position: absolute;
                 top: 0;
@@ -587,6 +591,9 @@ header {
                 flex-direction: column;
                 justify-content: center;
                 transition: opacity 0.2s ease;
+                // &:hover, &:focus  {
+                //     opacity: 1;
+                // }
                 .h4 {
                     font: {
                         family: SourceSansProLight;
@@ -631,9 +638,9 @@ header {
                     }
                 }
             }
-            &:hover .portfolio-products-item-info {
-                opacity: 1;
-            }
+            // &:hover, &:focus .portfolio-products-item-info {
+            //     opacity: 1;
+            // }
             &:hover .portfolio-products-item-info-icons {
                 top: 0;
             }
